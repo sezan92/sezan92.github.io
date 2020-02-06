@@ -1,3 +1,3 @@
-# Your blog
+# HELLO WORLD!
 
-This is the repository for your blog! Click *_config.yml* above to get started and fill in the details. Then click *index.md* and edit it to start creating your home page.
+Hello World! I am MD Muhaimin Rahman, working as an AI Engineer in Japan. Welcome to my blog! :) Enjoy
