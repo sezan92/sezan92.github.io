@@ -4,7 +4,7 @@ Hello! I am MD Muhaimin Rahman, nickname sezan. I am working as a Machine Learni
 
 ### Email id:
 ```
-sezan92@gmail.com
+sezan92[at]gmail[dot]com
 ```
 
 
