@@ -14,11 +14,11 @@ Q learning , can be said one of the most famous -and kind of intuitive- of all R
 
 First , start with the Intuition. Let's assume , you are in a maze
 
-![](QLearningGame.gif)
+![](/images/QLearningGame_files/QLearningGame.gif)
 
 Okay okay! I admit, it is not a maze. just a house with 5 rooms. And I got it from, this [link](http://mnemstudio.org/path-finding-q-learning-tutorial.htm) . Your goal is to get out of this place, no matter where you are. But you don't know - atleast pretend to - how to get there! After wondering about the map, you stumbled upon a mysterious letter with a lot of numbers in the room.
 
-![QMatrix](q_matrix5.gif)
+![QMatrix](/images/QLearningGame_files/q_matrix5.gif)
 
 The matrix has 6 columns and 6 rows. What you will have to do , is to go to the room with highest value. Suppose, you are in room number 2. Then , you will have to move to room number 3 . Then you get out! Look at the picture again! You can try with every state, you are guaranteed to get out of the house, using this matrix! .
 
@@ -29,7 +29,7 @@ In the world of RL, every room is called a ```state```, movement from one state 
 
 - First , initialize the matrix as Zeros
 
-![](q_matrix1.gif)
+![](/images/QLearningGame_files/q_matrix1.gif)
 
 - Then we will apply the Q learning update equation
 
