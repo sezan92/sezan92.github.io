@@ -32,13 +32,10 @@ In the world of RL, every room is called a ```state```, movement from one state 
 ![](/images/QLearningGame_files/q_matrix1.gif)
 
 - Then we will apply the Q learning update equation
-
-<img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bequation%7D%20Q(s_t%2Ca)%20%3D%20Q(s_t%2Ca)%20%2B%20%5Calpha%20(Q%27(s_%7Bt%2B1%7D%2Ca)-Q(s_t%2Ca))%20%5Cend%7Bequation%7D"/>
-
-
-
-
-Here, <img src="https://render.githubusercontent.com/render/math?math=$s_t$"/> is state at time $t$ , $s_{t+1}$ means the next state, $a$ is action. Q(s_t,a_t) means Q matrix value for state $s_t$ and action $a_t$ , $Q'(s_{t+1},a)$ means target Q value with state $s_{t+1}$ and the ***BEST ACTION*** for next state. Here $\alpha $ is learning rate}
+\begin{equation}
+Q(s_t,a) = Q(s_t,a)+\alpha (Q'(s_{t+1},a)-Q(s_t,a))
+\end{equation}
+Here, $s_t$ is state at time $t$ , $s_{t+1}$ means the next state, $a$ is action. Q(s_t,a_t) means Q matrix value for state $s_t$ and action $a_t$ , $Q'(s_{t+1},a)$ means target Q value with state $s_{t+1}$ and the ***BEST ACTION*** for next state. Here $\alpha $ is learning rate}
 
 Before we proceed, let me ask you, does this equation ring a bell ? I mean, haven't you seen a similar equation ? 
 
