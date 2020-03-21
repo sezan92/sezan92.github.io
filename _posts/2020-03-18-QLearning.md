@@ -38,7 +38,7 @@ In the world of RL, every room is called a ```state```, movement from one state 
 
 
 
-Here, $s_t$ is state at time $t$ , $s_{t+1}$ means the next state, $a$ is action. Q(s_t,a_t) means Q matrix value for state $s_t$ and action $a_t$ , $Q'(s_{t+1},a)$ means target Q value with state $s_{t+1}$ and the ***BEST ACTION*** for next state. Here $\alpha $ is learning rate}
+Here, <img src="https://render.githubusercontent.com/render/math?math=$s_t$"/> is state at time $t$ , $s_{t+1}$ means the next state, $a$ is action. Q(s_t,a_t) means Q matrix value for state $s_t$ and action $a_t$ , $Q'(s_{t+1},a)$ means target Q value with state $s_{t+1}$ and the ***BEST ACTION*** for next state. Here $\alpha $ is learning rate}
 
 Before we proceed, let me ask you, does this equation ring a bell ? I mean, haven't you seen a similar equation ? 
 
