@@ -33,9 +33,7 @@ In the world of RL, every room is called a ```state```, movement from one state 
 
 - Then we will apply the Q learning update equation
 
-<img src="https://render.githubusercontent.com/render/math?math=begin{equation}
-Q(s_t,a) = Q(s_t,a) + \alpha (Q'(s_{t+1},a)-Q(s_t,a))
-\end{equation}"/>
+<img src="https://render.githubusercontent.com/render/math?math=%5Cbegin%7Bequation%7D%20Q(s_t%2Ca)%20%3D%20Q(s_t%2Ca)%20%2B%20%5Calpha%20(Q%27(s_%7Bt%2B1%7D%2Ca)-Q(s_t%2Ca))%20%5Cend%7Bequation%7D"/>
 
 
 
