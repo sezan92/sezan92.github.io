@@ -1,4 +1,4 @@
-# Thermal Image generation to help Covid-19 test or any other flu test
+# Thermal Image generation
 > Can a Deep learning-based  Image translation-based method help us to use PCR tests efficiently? [Repository link](https://github.com/sezan92/pix2pix_thermal)
 
 
