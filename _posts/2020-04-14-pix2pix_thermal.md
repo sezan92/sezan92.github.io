@@ -1,5 +1,5 @@
 # Thermal Image generation to help Covid-19 test or any other flu test
-> Can Deep learning based  Image translation based method help us to use PCR tests efficiently? [Repository link](https://github.com/sezan92/pix2pix_thermal)
+> Can a Deep learning-based  Image translation-based method help us to use PCR tests efficiently? [Repository link](https://github.com/sezan92/pix2pix_thermal)
 
 
 ***contact: sezan92[at]gmail[dot]com***
@@ -8,13 +8,13 @@
 
 ***Let me give the disclaimer first: I am not sure this method will work 100%.*** This blog is not a detailed explanation of ***Pix2Pix*** Image translation! It is just overall look
 
-Image translation is a very powerful method in Deep learning. It can be used to make color images from BW. It can be used to generate image from the sketch. Why not we use it to fight Covid-19?
+Image translation is a very powerful method in Deep learning. It can be used to make color images from BW. It can be used to generate an image from the sketch. Why not we use it to fight Covid-19?
 
 ***Let me explain***
 
-One of the most common problems we faced during this Covid-19 pandemic, is to test people if they have Covid-19 virus or not!. Why ? As it is a new virus, we dont have enough amount of kits! So for many countries - developed as well- it was difficult to test all of its people! So I was thinking, how can my little knowledge in Deep learning help them? One way, is to use the X-ray data of Covid-19 patients and segment the lungs affected by influenza! But there are many problems with this issue. First, Medical Data , are always scarce compared to other dataset. Second, I am not an expert. So handling this sensitive data in this crisis situation is not for me. What if my model - which is black box model and cannot explain why does it work ***yet***- goes wrong for one patient and he ***DIES BECAUSE OF ME?*** No way!
+One of the most common problems we faced during this Covid-19 pandemic, is to test people if they have Covid-19 virus or not!. Why? As it is a new virus, we don't have enough amount of kits! So for many countries - developed as well- it was difficult to test all of its people! So I was thinking, how can my little knowledge in Deep learning help them? One way, is to use the X-ray data of Covid-19 patients and segment the lungs affected by influenza! But there are many problems with this issue. First, Medical Data, are always scarce compared to other datasets. Second, I am not an expert. So handling this sensitive data in this crisis situation is not for me. What if my model - which is black-box model and cannot explain why does it work ***yet***- goes wrong for one patient and he ***DIES BECAUSE OF ME?*** No way!
 
-So I got another Idea- thanks to God- . What i say many airports installed Thermal cameras for checking the temperatures of the people coming in. The idea is to check if someone has a fever, they will test him , isolate him , or whatever etc etc. It will make sure , they can selectively test the people who need it most! But it is harder to install thermal cameras all over the country in such a short period of time! So I got an idea! Why dont we use Image translation method to generate thermal images from the RGB images! We already have a lot of surveilance cameras around us. Just use those RGB image!
+So I got another Idea- thanks to God. What I saw many airports installed Thermal cameras for checking the temperatures of the people coming in. The idea is to check if someone has a fever, they will test him, isolate him, or whatever etc,etc. It will make sure, they can selectively test the people who need it most! But it is harder to install thermal cameras all over the country in such a short period of time! So I got an idea! Why don't we use Image-translation method to generate thermal images from the RGB images! We already have a lot of surveillance cameras around us. Just use those RGB images!
 
 ### Previous works
 
