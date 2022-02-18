@@ -1,7 +1,7 @@
 "Because being normal, is too mainstream!"
 
 ## un-m@d's blog
-Hello world! I am MD Muhaimin Rahman- nickname is Sezan, working as a Machine Learning Engineer in Japan .Also I work as a contractor for various other companies! :wink: . I am writing about my open source projects in this blog. 
+Hello world! I am MD Muhaimin Rahman- nickname is Sezan, working as a Machine Learning Engineer in Japan . I am writing about my open source projects in this blog. 
 
 ### What is un-m@d ? 
 
