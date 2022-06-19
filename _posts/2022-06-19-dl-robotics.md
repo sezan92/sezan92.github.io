@@ -9,12 +9,13 @@
 - But good and long term research field. 
 
 
-[Sofia](/images/dl_in_robotics/2_thumb_sofia.jpg)
+![Sofia](/images/dl_in_robotics/2_thumb_sofia.png)
+
 From Terminators to the Endgame, we all imagine AI to be synonymous with Robots. Every advertisement for Artificial Intelligence comes with a poster of a robot behaving like and/or surpassing human beings. Now, we might have a lot of software outperforming human beings in many tasks, but we don’t have - at least on the massive production scale- autonomous robots outperforming humans in day-to-day tasks. The most common robots in the production with consumer demands are the vacuum cleaner robots. The worth mentioning Deep Learning (DL) model they are using is Object detection - and probably in some cases, image segmentation. The other algorithms of the mobile robots like SLAM, navigation, behavior planning, sensor fusion, etc, are still using the non-DL methods. The DL-based approach in those tasks is still under active research. This makes the case for Deep Learning in Robotics research quite an interesting subject with great potential though. More on this later. 
  
 ## Why so slow progress 
 
-[ros_turtle](/images/dl_in_robotics/1_ros_turtle.jpg)
+![ros_turtle](/images/dl_in_robotics/1_ros_turtle.jpg)
 [Credit](https://ja.m.wikipedia.org/wiki/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB:ROS_C_logo.jpg)
  
  
