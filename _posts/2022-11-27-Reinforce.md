@@ -13,6 +13,7 @@
 In this blog i am writing about new type of Reinforcement learning (will be referred as RL) method. REINFORCE method.
 
 ### History
+[Include a meme ] 
 [Include the history of Reinforce]
 
 ### Why Reinforce or Policy Gradient methods? 
