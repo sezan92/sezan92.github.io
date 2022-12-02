@@ -35,6 +35,30 @@ I find this [blog](https://towardsdatascience.com/an-intuitive-explanation-of-po
 Assuming you have read the intuition blog, please go through the walkthrough.
 ### How to run?
 
+***Build Image***
+```shell
+docker compose build
+```
+***Run the container***
+```shell
+docker compose up
+```
+
+***Training***
+
+```shell
+python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </path/to/save/the/model> --gamma <gamma hyper-parameter> --epoch <num_of_epoch> --plot <to plot or not> --plot_fig_path </path/to/save/the/plot>
+```
+
+***Inference***
+- To setup for inference, run from outside the docker container
+    ```shell
+    sudo xhost +SI:localuser:<username>
+    ```
+- From another terminal run `docker exec -it <container_name>` and inside the container run,
+    ```shell
+    python3 /src/reinforce_discrete.py LunarLander-v2 --infer --infer_weight /path/to/saved/weight --infer_render <to render the inference or not> --infer_render_fps <fps for render video> --infer_video </path/to/save/inference/rendered/video.>
+    ```
 # (TODO: sezan92)
 - Add a github repo link
 - add command to run the pipeline.
