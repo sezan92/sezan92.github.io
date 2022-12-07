@@ -14,7 +14,7 @@ In this blog i am writing about new type of Reinforcement learning (will be refe
 
 ### History
 [Include a meme ] 
-[Include the history of Reinforce]
+This method was first introduced by Ronald J. Williams in the Paper [link](https://link.springer.com/content/pdf/10.1007/BF00992696.pdf). This paper is a lot more mathematical. Luckily we have intuition of it as well!
 
 ### Why Reinforce or Policy Gradient methods? 
 
@@ -31,6 +31,10 @@ Value-based methods choose actions randomly. Making action choice erratic, at le
 I find this [blog](https://towardsdatascience.com/an-intuitive-explanation-of-policy-gradient-part-1-reinforce-aa4392cbfd3c) to have the best intuition on Policy gradient method. Please check it out first before proceeding!
 
 ## Code Walkthrough
+
+### Repository
+
+The repository is [here](https://www.github.com/sezan92/rl)
 
 Assuming you have read the intuition blog, please go through the walkthrough.
 ### How to run?
@@ -59,6 +63,3 @@ python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </pa
     ```shell
     python3 /src/reinforce_discrete.py LunarLander-v2 --infer --infer_weight /path/to/saved/weight --infer_render <to render the inference or not> --infer_render_fps <fps for render video> --infer_video </path/to/save/inference/rendered/video.>
     ```
-# (TODO: sezan92)
-- Add a github repo link
-- add command to run the pipeline.
