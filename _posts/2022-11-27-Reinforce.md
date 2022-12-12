@@ -2,7 +2,7 @@
 
 > Enter the world of Policy Gradient methods!
 
-## Previous blogs
+## <a name="previous_blogs">Previous blogs</a>
 
 - [The Prequel, Q Learning](https://sezan92.github.io/2020/03/18/QLearning.html)
 - [Deep Q Network](https://sezan92.github.io/2020/03/18/DQN.html)
@@ -74,9 +74,11 @@ python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </pa
     python3 /src/reinforce_discrete.py LunarLander-v2 --infer --infer_weight /path/to/saved/weight --infer_render <to render the inference or not> --infer_render_fps <fps for render video> --infer_video </path/to/save/inference/rendered/video.>
     ```
 
+Now lets look at the code,
+
 ### rl/rl/policy.py script
 
-The `__init__` and `forward` methods are same for policy. Same to previous blogs (TODO: add links here)
+The `__init__` and `forward` methods are same to [previous blogs](#previous_blogs). A simple neural network of 2 hidden layers.
 
 ```python
 
@@ -96,9 +98,8 @@ class Policy:
 
 ```
 
-Only difference is the action,
 
-- Action is a bit different
+- But, the Action is a bit different
 
 ```python
 
@@ -109,6 +110,10 @@ Only difference is the action,
         action = m.sample()
         return action.item(), m.log_prob(action)
 ```
+
+- So we see that the `act` method outputs the action value (obvious) and the action probability.
+
+- Why probability ? The reason is because for the gradient ascent we will need the action probability. [TODO: put equation.]
 
 
 ### rl/rl/renforce.py script
