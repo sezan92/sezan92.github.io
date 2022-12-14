@@ -75,7 +75,9 @@ python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </pa
     ```
 
 
-### What about inside the code?
+***What about the codebase?***
+
+### Policy Script
 
 The `__init__` and `forward` methods are same to [previous blogs](#previous_blogs). A simple neural network of 2 hidden layers.
 
@@ -112,8 +114,13 @@ class Policy:
 
 - So we see that the `act` method outputs the action value (obvious) and the action probability.
 
-- Why probability ? The reason is because for the gradient ascent we will need the action probability. [TODO: put equation.]
+- Why probability ? The reason is because for the gradient ascent we will need the action probability. If we look at the equation for gradient ascent,
 
+    $$\nabla_\theta J(\theta)= \hat{A}(s,a)\nabla_\theta\log\pi_{\theta}(s|a)$$
+
+    $$\theta = \theta + \alpha\nabla_\theta J(\theta) $$
+
+    So it turns out, we need to have action value to run the agent and the log probability as well.
 
 ### rl/rl/renforce.py script
 
