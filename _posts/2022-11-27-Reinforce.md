@@ -144,19 +144,17 @@ class Policy:
 
     ```python3
         optimizer = optim.Adam(policy.parameters(), lr=learning_rate)
+    ```
+
+- Get the action and log probability, get the reward, and save the rewards with log probability 
+
+    ```python3
         for i_episode in range(1, n_episodes + 1):
             saved_log_probs = []
             rewards = []
             state = env.reset()
             states = [state]
             for t in range(max_t):
-
-    ```
-
-- Get the action and log probability, get the reward, and save the rewards with log probability 
-
-    ```python3
-
                 action, log_prob = policy.act(state)
                 saved_log_probs.append(log_prob)
                 state, reward, done, _ = env.step(action)
@@ -174,12 +172,13 @@ class Policy:
             state_values = get_state_values(rewards)
 
             policy_loss = []
-            for i, log_prob in enumerate(saved_log_probs):
+            
     ```
 
 - Advantage according to the equation, get the policy loss and backpropagate
 
     ```python3
+            for i, log_prob in enumerate(saved_log_probs):
                 A = expected_rewards[i] - np.mean(expected_rewards)
                 policy_loss.append((-log_prob * A).float())
             policy_loss = torch.cat(policy_loss).sum()
