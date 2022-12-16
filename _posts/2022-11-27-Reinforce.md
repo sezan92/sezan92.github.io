@@ -165,7 +165,9 @@ class Policy:
             scores.append(sum(rewards))
     ```
 
-- TODO: write something
+- We will get expected rewards based on gamma. It is the application of the following equation,
+
+    $$ E = R_i +  \gamma R_{i +1} + \gamma^2R_{i+2} ....\gamma^{n-1}R_{i + n - 1}$$
 
     ```python3
             expected_rewards = get_expected_reward(rewards, gamma)
@@ -175,7 +177,13 @@ class Policy:
             
     ```
 
-- Advantage according to the equation, get the policy loss and backpropagate
+- Advantage according to the equation, get the policy loss and backpropagate.
+
+    Advantage is , as following
+    $$A = E - mean(E) $$
+    There is a good explanation of using Advantage [here](https://towardsdatascience.com/an-intuitive-explanation-of-policy-gradient-part-1-reinforce-aa4392cbfd3c)
+
+    The code is as follows
 
     ```python3
             for i, log_prob in enumerate(saved_log_probs):
