@@ -32,7 +32,7 @@ Value-based methods choose actions randomly. Making action choice erratic, at le
 
 ## Let's talk about intuition
 
-I find this [blog](https://towardsdatascience.com/an-intuitive-explanation-of-policy-gradient-part-1-reinforce-aa4392cbfd3c) to have the best intuition on Policy gradient method. Please check it out first before proceeding!
+I find this [blog](https://towardsdatascience.com/an-intuitive-explanation-of-policy-gradient-part-1-reinforce-aa4392cbfd3c) to have the best intuition on Policy gradient method. Please check it out first before proceeding! I plan to write intuition blog in future.
 
 ## Now it's time of Code Walkthrough
 
@@ -181,7 +181,7 @@ class Policy:
 
     Advantage is , as following
     $$A = E - mean(E) $$
-    There is a good explanation of using Advantage [here](https://towardsdatascience.com/an-intuitive-explanation-of-policy-gradient-part-1-reinforce-aa4392cbfd3c)
+    There is a good explanation of using Advantage [here](https://towardsdatascience.com/an-intuitive-explanation-of-policy-gradient-part-1-reinforce-aa4392cbfd3c). But for now, it is enough to understand that, Advantage is more dependant on action by an agent, i.e. it shows the effect of taking an action for a certain state , and hence named Advantage maybe!
 
     The code is as follows
 
@@ -212,3 +212,7 @@ class Policy:
         torch.save(policy.state_dict(), model_weights_path)
         return scores
     ```
+
+### Score plot
+
+![Score plot](/images/reinforce_method_27112022/plot.png)
