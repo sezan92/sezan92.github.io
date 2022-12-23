@@ -215,4 +215,14 @@ class Policy:
 
 ### Score plot
 
+The score plots of the entire training is as follows.
+
 ![Score plot](/images/reinforce_method_27112022/plot.png)
+
+### TODO
+
+- [ ] Compare Reinforce method plots to DQN based methods.
+
+## Conclusion
+
+To conclude, Reinforce method opens the pathway to policy gradient methods, making continuous action based problems easier to solve. But it has high variance issue. It needs to be updated. Which will be subject to my upcoming blogs.
