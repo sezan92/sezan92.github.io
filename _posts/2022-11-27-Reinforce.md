@@ -2,6 +2,9 @@
 
 > Enter the world of Policy Gradient methods!
 
+## Video
+
+- [Episode 100 Trial video](https://youtu.be/DrvVBibxO2o)
 
 ## <a name="previous_blogs">Let's look at the previous blogs</a>
 
