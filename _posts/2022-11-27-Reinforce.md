@@ -4,7 +4,7 @@
 
 ## Video
 
-- [Episode 100 Trial video](https://youtu.be/DrvVBibxO2o)
+- ![Episode 100 Trial video](img.youtubue.com/vi/DrvVBibxO2o/maxresdefault.jpg)(https://youtu.be/DrvVBibxO2o)
 
 ## <a name="previous_blogs">Let's look at the previous blogs</a>
 
