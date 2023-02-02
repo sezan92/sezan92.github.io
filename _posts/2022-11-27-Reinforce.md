@@ -4,7 +4,13 @@
 
 ## Video
 
-- [![Episode 100 Trial video](https://img.youtube.com/vi/DrvVBibxO2o/0.jpg)](https://youtu.be/DrvVBibxO2o)
+### Episode 100 Trial
+
+[![Episode 100 Trial video](https://img.youtube.com/vi/DrvVBibxO2o/0.jpg)](https://youtu.be/DrvVBibxO2o)
+
+### Episode 800 Trial
+
+[![Episode 800 Trial video](https://img.youtube.com/vi/FyB3vOQ0NbI/0.jpg)](https://youtu.be/FyB3vOQ0NbI)
 
 ## <a name="previous_blogs">Let's look at the previous blogs</a>
 
