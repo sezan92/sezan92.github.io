@@ -4,6 +4,8 @@
 
 ## Video
 
+First, let's look at the resulting video, to understand what we are doing.
+
 ### Episode 100 Trial
 
 [![Episode 100 Trial video](https://img.youtube.com/vi/DrvVBibxO2o/0.jpg)](https://youtu.be/DrvVBibxO2o)
@@ -23,7 +25,7 @@ Previous blogs were about value-gradient methods where the actions were discrete
 
 ## Reinforce
 
-In this blog i am writing about new type of Reinforcement learning (will be referred as RL) method; REINFORCE method.
+In this blog, i am writing about new type of Reinforcement learning (will be referred as RL) method; REINFORCE method.
 
 ### History
 
@@ -45,7 +47,7 @@ I find this [blog](https://towardsdatascience.com/an-intuitive-explanation-of-po
 
 ## Now it's time of Code Walkthrough
 
-### How to run? 
+### How to run?
 
 The repository is [here](https://www.github.com/sezan92/rl)
 
@@ -83,7 +85,6 @@ python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </pa
     python3 /src/reinforce_discrete.py LunarLander-v2 --infer --infer_weight /path/to/saved/weight --infer_render <to render the inference or not> --infer_render_fps <fps for render video> --infer_video </path/to/save/inference/rendered/video.>
     ```
 
-
 ***What about the codebase?***
 
 ### Policy Script
@@ -108,8 +109,7 @@ class Policy:
 
 ```
 
-
-- But, the Action is a bit different
+- But the Action is a bit different this time!
 
 ```python
 
@@ -234,4 +234,6 @@ The score plots of the entire training is as follows.
 
 ## Conclusion
 
-To conclude, Reinforce method opens the pathway to policy gradient methods, making continuous action based problems easier to solve. But it has high variance issue. It needs to be updated. Which will be subject to my upcoming blogs.
+To conclude, Reinforce method opens the pathway to policy gradient methods, making continuous action based problems easier to solve. But it has high variance issue. It needs to be updated. Which will be subject to my upcoming blogs. Although I mentioned about the continuous actions, this blog is still working with discrete actions! In the part 2 of reinforce, I will try to update the action into Continuous one!
+
+If you have any question or comment, please ask at `sezan92[at]gmail[dot]com`
