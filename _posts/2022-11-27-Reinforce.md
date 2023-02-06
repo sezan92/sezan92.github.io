@@ -91,7 +91,7 @@ python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </pa
 
 The `__init__` and `forward` methods are same to [previous blogs](#previous_blogs). A simple neural network of 2 hidden layers.
 
-```python
+```python3
 
 class Policy:
 
@@ -111,7 +111,7 @@ class Policy:
 
 - But the Action is a bit different this time!
 
-```python
+```python3
 
     def act(self, state):
         state = torch.from_numpy(state).float().unsqueeze(0).to(device)
