@@ -228,6 +228,14 @@ The score plots of the entire training is as follows.
 
 ![Score plot](/images/reinforce_method_27112022/plot.png)
 
+### Problem with this approach
+
+If you check the plot above, and also the videos referred to at the beginning, you will notice that the agent is not stable enough. After 700 episodes, at the 800th episode, it should do the optimum task to sit down at the right place. But it was hovering, which can be referred to two cases
+
+- This method only considers the reward due to action and no evaluation of the state! So when hovering it might be getting a higher reward than falling down. It is sub-optimal behavior only based on actions!
+- Hence, the training process has a higher variance. As we are training the agent based only on the rewards of the actions, not on the value of the state.
+- How to solve it? We will find out in the next blogs!
+
 ### TODO
 
 - [ ] Compare Reinforce method plots to DQN based methods.
