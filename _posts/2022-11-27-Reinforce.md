@@ -10,9 +10,16 @@ First, let's look at the resulting video, to understand what we are doing.
 
 [![Episode 100 Trial video](https://img.youtube.com/vi/DrvVBibxO2o/0.jpg)](https://youtu.be/DrvVBibxO2o)
 
+### Episode 700 Trial
+
+[![Episode 700 Trial video](https://img.youtube.com/vi/WVZch1Y7k-A/0.jpg)](https://youtu.be/WVZch1Y7k-A)
+
 ### Episode 800 Trial
 
 [![Episode 800 Trial video](https://img.youtube.com/vi/FyB3vOQ0NbI/0.jpg)](https://youtu.be/FyB3vOQ0NbI)
+
+
+***Have you wondered why, After episode 100 the agent was not working at all, and ad 700 it looks to learn the behavior and then at 800 it was stuck in the air? Let’s start!***
 
 ## <a name="previous_blogs">Let's look at the previous blogs</a>
 
@@ -65,10 +72,10 @@ docker compose build
 docker compose up
 ```
 
-***Training***
+***Training with saving the video after every certain episode***
 
 ```shell
-python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </path/to/save/the/model> --gamma <gamma hyper-parameter> --epoch <num_of_epoch> --plot <to plot or not> --plot_fig_path </path/to/save/the/plot>
+python3 /src/reinforce_discrete.py LunarLander-v2 --train --save_model_path </path/to/save/the/model> --gamma <gamma hyper-parameter> --epoch <num_of_epoch> --plot <to plot or not> --plot_fig_path </path/to/save/the/plot> --train_video_dir </path/to/train_video> --train_video_every <number_of_episodes_to_save_video>
 ```
 
 ***Inference***
@@ -237,7 +244,7 @@ If you check the plot above, and also the videos referred to at the beginning, y
 - How to solve it? We will find out in the next blogs!
 
 ### TODO
-
+I was planning to compare the score plots! When I will be able to do it, I will update you!
 - [ ] Compare Reinforce method plots to DQN based methods.
 
 ## Conclusion
