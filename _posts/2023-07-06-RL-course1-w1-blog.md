@@ -46,3 +46,137 @@ My note:
 - the instructor could have gone with a simpler example, like food for a certain location etc
 - ALso i find the intuition of the equation not so good.
 
+
+
+### Action value
+
+Action value is the value of an action. (I know it is not genious to figure it out). But the question is how can we know the value of an action ? 
+
+from the video, how can we know the value of the action of prescribing one medicine ? one of the ways is sample averaging method.
+
+![Screenshot from 2023-03-06 13-19-15](https://user-images.githubusercontent.com/11025093/223018545-601f20f3-fbc0-4b70-97f9-435955f93102.png)
+
+#### intuition
+
+for example if some people had a headache and the doctor doesnt know among the medicines  $A$ , $B$, $C$ which are the best. he tries all of them . Suppose for medicine $A$ the headache is cured 90 out of 100 times. for medicine $B$ it is 50 out of 100 times. then the action value for $A$ is $90/100$ => $0.9$ . now what about the other 10 ? they might have other factors, which leads us to the notion of $state$ value. more on that later. [Video minute 1:57]
+
+
+### Greedy action
+
+Suppose we get action values for all three actions after many trials. When we choose the action with the best action value, this is called greedy action selection. This process of choosing greedy action is known as exploitation.
+
+![exploitation](https://user-images.githubusercontent.com/11025093/223735899-4f43cd27-b08f-4acf-ba69-bca4888aecb2.png)
+
+
+On the other hand, we also can explore other actions in the expense of getting best reward . this will let us know more about the actions. this is known, as one might have guessed exploration.
+
+now the problem is, we cannot do both - at least with one model. This is a fundamental problem in Reinforcement learning problem. known as `Exploitation Exploration` dilemma. 
+
+
+we can rewrite the sample-average method for learning action values as following, 
+
+![Screenshot from 2023-03-14 13-14-42](https://user-images.githubusercontent.com/11025093/224891672-873ee138-6926-4469-a73b-e7c5627ec263.png)
+
+in other words, 
+
+![Screenshot from 2023-03-14 13-15-45](https://user-images.githubusercontent.com/11025093/224891760-ae8e47c8-85ef-44ae-9960-e796ef95a54b.png)
+
+
+in the equation , $\frac{1}{n}$  is known for a limited number of steps. But what if we do not know how many steps will be taken.  For example, we will never know in how many moves a game of chess can be won. In those cases , we can write $\alpha$ in stead! It is a hyperparameter known as step size. it will dictate how quickly our agent can update the action value.
+
+![Screenshot from 2023-03-14 13-16-25](https://user-images.githubusercontent.com/11025093/224891839-cee771ec-8256-49bf-84b1-bef8f4a0f8ff.png)
+
+[upto 2:43]
+
+
+### Non-stationary bandit problem
+
+let's look at the equation again, 
+![Screenshot from 2023-03-27 14-56-30](https://user-images.githubusercontent.com/11025093/227853320-0cfacce5-6359-40e9-871a-bb6e43838779.png)
+
+![Screenshot from 2023-03-27 15-01-49](https://user-images.githubusercontent.com/11025093/227853867-c625f498-0ec8-4921-90f9-533afbe3aaf4.png)
+
+from the above two equations, we see that $Q_{n+1}$ depends on the most recent rewards more than the past rewards. making it possible to update over time
+
+what does the (re-write of) the equation tells us?
+
+it says that the Action values always give more focus on the recent rewards than the previous ones. **Why is it important?** It helps the model be updated. There might be some actions that might be time dependent. e.g. some medicines might work in one season, but not in others, and vice versa. This equation helps us keep track of recent rewards and let the model learn from the most recent experiences.
+ 
+### Exploration Exploitation trade-off
+
+**Video1**
+
+**What is the trade-off**
+
+Exploration means the agent tries each action and sees what the action leads to. 
+
+Exploitation, on the other hand, means that the agent takes the action with the maximum reward, from his prior knowledge, which is always limited.
+
+Now, if we let the agent always explore, the agent will not ever act according to the previous knowledge of best actions; resulting in never maximizing the total rewards. If we always let it exploit, we might miss the information about all plausible state-action pairs! This is known as the **exploration-exploitation dilemma**.
+
+**Solution?**
+
+One of the most popular solutions is Epsilon's greedy actions. For certain times let the agent explore, for other times let it exploit! **Then how to know when to do which one?** In this case, what we do, is set a threshold named $\epsilon$. Then generate a random floating point number (0.0-1.0). If the random number is greater than $\epsilon$, explore, otherwise exploit! Naturally, if we want to explore more, we will set the $\epsilon$ lower, otherwise bigger. In the training time, we in general want our agent to explore initially more, and exploit at the end more. So in the beginning the $\epsilon$ is higher, and in the end, it is lower! But there are other methods, this is good as a getting-started solution!
+
+
+### For example
+
+suppose for the medical trial of 3 medicines, the optimum values are 
+$q_1 = 0.25, q_2=0.75, q_3=0.5$
+
+but initially, we do not know the optimum value. how about we start with high initial values,
+
+$Q_1 = Q_2 = Q_3 = 2$ 
+
+now let's remember the incremental update equation,
+
+$Q_{n+1}  $&larr;$  Q_n + \alpha(R_n - Q_n)$
+
+Let's assume positive feedback has point $1$ and negative has $0$.  After running some trials, we might get closer to the optimum values,
+
+![Screenshot from 2023-04-25 14-08-25](https://user-images.githubusercontent.com/11025093/234179596-b7276248-f531-439f-bd8e-fd25fb9ade24.png)
+
+
+### Comparison
+
+![compare_performance](https://user-images.githubusercontent.com/11025093/235430182-8dd3a61c-33c7-4861-b2ff-73e879193e02.png)
+
+from the image above it seems that the optimistic initial value setting will help us more compared to the epsilon greedy!
+
+### Demerits
+
+- We do not know what is the best optimistic initial value. 
+- it is temporary, i.e. after the first initial trials the explorations will get stopped
+
+### My opinion
+
+- We can use both epsilon greedy and optimistic initial value.
+
+### Uppder confidence Action selection
+
+The Epsilon greedy action selection works the following way
+
+![Screenshot from 2023-06-05 12-22-11](https://github.com/sezan92/sezan92.github.io/assets/11025093/c3f8ea4b-ab22-458f-a6f7-e066aaa368c3)
+
+
+Here, for exploration, we are choosing random actions uniformly. The problem is, we are giving the same weight to all random actions. How about while choosing the random action, we can choose the less explored action? In other words, we prioritize the actions with less uncertainty (due to that action being less explored). 
+
+For example, the uncertainty can be shown as follows,
+
+
+![Screenshot from 2023-06-14 17-16-38](https://github.com/sezan92/sezan92.github.io/assets/11025093/0145c603-fb53-4e36-b7bc-10ca2d84af97)
+
+in the process of UCB, we guess that the unknown action is good. i.e. high Q value. and hence called the upper confidence action value.
+
+The equation for UCB combines exploration and exploitation like the following, 
+
+![Screenshot from 2023-07-03 15-29-56](https://github.com/sezan92/sezan92.github.io/assets/11025093/3b444071-158c-4399-8d9b-db8bfee511f6)
+
+
+$t$ is the timesteps and $N_t(a)$ means the number of times an action $a$ is being taken. it means that the more we explore an action $a$, the lesser it will have an effect. like the following example, 
+
+![Screenshot from 2023-07-03 15-33-09](https://github.com/sezan92/sezan92.github.io/assets/11025093/ca1ab6ed-a86c-49ee-acaa-fece838f2bea)
+
+where $c$ is the hyperparameter. on the 10-arm bandit test bed, the performance is as follows, 
+
+![Screenshot from 2023-07-03 15-35-20](https://github.com/sezan92/sezan92.github.io/assets/11025093/f60bed21-ac04-446c-819c-49877baec62d)
