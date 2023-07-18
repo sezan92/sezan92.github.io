@@ -4,57 +4,57 @@
 
 ## TLDR
 
-- This note blog shows my notes on the Reinforcement learning (RL) course 1 Week 1 videos
+- This note blog shows my notes on the Reinforcement learning (RL) course 1 Week 1 video
 
 ### Story
 
 I am an RL enthusiast for a long time. The concept of training an agent based on rewards or punishments fascinated me from the beginning. I kept exploring the RL methods and architectures by myself for a bit of time. For example, the blogs of [The Game is ON!](https://sezan92.github.io/2020/03/22/RL.html) were based on my learning journey. It is still ongoing though!
 
-But there was something missing. I had some issues with basic terminologies in the  literature. Some basic algorithms seemed very difficult for me. I had to step back a bit. I tried to read The famous book by "Sutton and Barto". But still there were something missing. I do not know what. *Then I got to know about Reinforcement learning Specialization by University of Alberta*. In this blog series I want to share my thoughts / ideas / notes about the course. I will try to explain in my simple language. The specialization is really good. I learnt a lot of things from it. First blog of this (hopefully) continuing blog series is about the Week 1 course 1 of the specialization. Please read. If there is any concern/question/feedback, please do not hesitate to email me to sezan92[at]gmail[dot]com.
+But there was something missing. I had some issues with basic terminologies in the literature. Some basic algorithms seemed very difficult for me. I had to step back a bit. I tried to read The famous book by "Sutton and Barto". But still, there was something missing. I do not know what. *Then I got to know about Reinforcement learning Specialization by the University of Alberta*. In this blog series, I want to share my thoughts/ideas/notes about the course. I will try to explain in simple language. The specialization is really good. I learned a lot of things from it. The first blog of this (hopefully) continuing blog series is about Week 1 course 1 of the specialization. Please read. If there is any concern/question/feedback, please do not hesitate to email me at sezan92[at]gmail[dot]com.
 
 2023/07/12
 
 ### Week 1
 
-- Introduced k-arm bandit problem. It is a simple game with multiple buttons. (screenshot). Each button will give you reward. you need to choose the best button by pressing each button and maximizing the reward. Best similar thing is gambing!! But in our life we may take decisions by trial and error.
+- Introduced k-arm bandit problem. It is a simple game with multiple buttons. (screenshot). Each button will give you a reward. you need to choose the best button by pressing each button and maximizing the reward. The best similar thing is gambling!! But in our life, we may take decisions by trial and error.
 
 ## Update 2023/02/22
 
-- Here the instructor gave example of clinical trial as k-armed bandit
+- Here the instructor gave the example of a clinical trial of a K-armed bandit
 ![k_armed_bandit_clinical_trial_pic_1](https://user-images.githubusercontent.com/11025093/220614930-30ff94e2-c943-4619-a25b-eebf9d7d279e.png)
 
-The big idea is that suppose a doctor has 3 patients. he doesnt know the medicine. so he trials 3 medicines for 3 patients. if he sees improvement in health in a patient for a certain medicine , he prescribes with the medicine.
+The big idea is that suppose a doctor has 3 patients. he doesn't know the medicine. so he trials 3 medicines for 3 patients. if he sees improvement in health in a patient for a certain medicine, he prescribes the medicine.
 
 - then the instructor defines the action and the reward combined as action value. here the action is the prescription and value is the better health.
 ![k_armed_bandit_action_values_equation](https://user-images.githubusercontent.com/11025093/220615216-d4df1955-58ba-4787-9e3c-7825c7dcbb88.png)
 
-- assuming the better health means better blood pressure, the instructor gives intuiton by following illustration
+- assuming better health means better blood pressure, the instructor gives intuition by following the illustration
 
 ![k_armed_bandit_trial_picture_equation](https://user-images.githubusercontent.com/11025093/220615637-9f057782-791e-44e8-9c52-af9b115d4399.png)
 
 - here each action $a$ , (i.e. medicine)  has action value $q(a)$ i.e. the blood pressure.
 
-- Our real life examples
+- Our real-life examples
 ![k_armed_bandit_other_examples](https://user-images.githubusercontent.com/11025093/220616144-23b61473-6cc1-43a6-8481-a61b2a6cc29a.png)
 
 My note:
 
-- I think clinical trial example is not good. Because they are not random trials. After many researches the doctors may get some candidates then they make a trial
-- also all 3 patients must have similar condition.
-- the instructor could have gone with a simpler example, like food for a certain location etc
-- ALso i find the intuition of the equation not so good.
+- I think the clinical trial example is not good. Because they are not random trials. After much research the doctors may get some candidates then they make a trial
+- also all 3 patients must have similar conditions.
+- the instructor could have gone with a simpler example, like food for a certain location, etc
+- Also I find the intuition of the equation not so good.
 
 ### Action value
 
-Action value is the value of an action. (I know it is not genious to figure it out). But the question is how can we know the value of an action ?
+Action value is the value of an action. (I know it is not genius to figure it out). But the question is how can we know the value of an action?
 
-from the video, how can we know the value of the action of prescribing one medicine ? one of the ways is sample averaging method.
+from the video, how can we know the value of the action of prescribing one medicine? One of the ways is the sample averaging method.
 
 ![Screenshot from 2023-03-06 13-19-15](https://user-images.githubusercontent.com/11025093/223018545-601f20f3-fbc0-4b70-97f9-435955f93102.png)
 
 #### intuition
 
-for example if some people had a headache and the doctor doesnt know among the medicines  $A$ , $B$, $C$ which are the best. he tries all of them . Suppose for medicine $A$ the headache is cured 90 out of 100 times. for medicine $B$ it is 50 out of 100 times. then the action value for $A$ is $90/100$ => $0.9$ . now what about the other 10 ? they might have other factors, which leads us to the notion of $state$ value. more on that later. [Video minute 1:57]
+for example, if some people had a headache and the doctor doesn't know the medicines  $A$ , $B$, $C$ which are the best. he tries all of them. Suppose for medicine $A$ the headache is cured 90 out of 100 times. for medicine $B$ it is 50 out of 100 times. then the action value for $A$ is $90/100$ => $0.9$ . now what about the other 10? They might have other factors, which leads us to the notion of $state$ value. more on that later. [Video minute 1:57]
 
 ### Greedy action
 
@@ -62,11 +62,11 @@ Suppose we get action values for all three actions after many trials. When we ch
 
 ![exploitation](https://user-images.githubusercontent.com/11025093/223735899-4f43cd27-b08f-4acf-ba69-bca4888aecb2.png)
 
-On the other hand, we also can explore other actions in the expense of getting best reward . this will let us know more about the actions. this is known, as one might have guessed exploration.
+On the other hand, we also can explore other actions at the expense of getting the best reward. this will let us know more about the actions. this is known, as one might have guessed exploration.
 
-now the problem is, we cannot do both - at least with one model. This is a fundamental problem in Reinforcement learning problem. known as `Exploitation Exploration` dilemma.
+now the problem is, we cannot do both - at least with one model. This is a fundamental problem in the Reinforcement learning problem. known as the `Exploitation Exploration` dilemma.
 
-we can rewrite the sample-average method for learning action values as following,
+we can rewrite the sample-average method for learning action values as follows,
 
 ![Screenshot from 2023-03-14 13-14-42](https://user-images.githubusercontent.com/11025093/224891672-873ee138-6926-4469-a73b-e7c5627ec263.png)
 
@@ -74,7 +74,7 @@ in other words,
 
 ![Screenshot from 2023-03-14 13-15-45](https://user-images.githubusercontent.com/11025093/224891760-ae8e47c8-85ef-44ae-9960-e796ef95a54b.png)
 
-in the equation , $\frac{1}{n}$  is known for a limited number of steps. But what if we do not know how many steps will be taken.  For example, we will never know in how many moves a game of chess can be won. In those cases , we can write $\alpha$ in stead! It is a hyperparameter known as step size. it will dictate how quickly our agent can update the action value.
+in the equation , $\frac{1}{n}$  is known for a limited number of steps. But what if we do not know how many steps will be taken?  For example, we will never know how many moves a game of chess can be won. In those cases, we can write $\alpha$ instead! It is a hyperparameter known as step size. it will dictate how quickly our agent can update the action value.
 
 ![Screenshot from 2023-03-14 13-16-25](https://user-images.githubusercontent.com/11025093/224891839-cee771ec-8256-49bf-84b1-bef8f4a0f8ff.png)
 
@@ -91,7 +91,7 @@ from the above two equations, we see that $Q_{n+1}$ depends on the most recent r
 
 what does the (re-write of) the equation tells us?
 
-it says that the Action values always give more focus on the recent rewards than the previous ones. **Why is it important?** It helps the model be updated. There might be some actions that might be time dependent. e.g. some medicines might work in one season, but not in others, and vice versa. This equation helps us keep track of recent rewards and let the model learn from the most recent experiences.
+it says that the Action values always give more focus on the recent rewards than the previous ones. **Why is it important?** It helps the model be updated. There might be some actions that might be time-dependent. e.g. some medicines might work in one season, but not in others, and vice versa. This equation helps us keep track of recent rewards and let the model learn from the most recent experiences.
 
 ### Exploration Exploitation trade-off
 
@@ -139,7 +139,7 @@ from the image above it seems that the optimistic initial value setting will hel
 
 ### My opinion
 
-- We can use both epsilon greedy and optimistic initial value.
+- We can use both epsilon greedy and optimistic initial values.
 
 ### Uppder confidence Action selection
 
