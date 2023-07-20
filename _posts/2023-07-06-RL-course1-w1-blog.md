@@ -1,18 +1,18 @@
 # Reinforcement Learning Course 1 Week 1
->
+
 > Notes for Reinforcement Learning Course 1 Week 1.
 
 ## TLDR
 
-- This note blog shows my notes on the Reinforcement learning (RL) course 1 Week 1 video
+- This note blog shows my notes on the Reinforcement learning (RL) course 1 week 1 video
 
 ### Background
 
 I am an RL enthusiast for a long time. The concept of training an agent based solely on the points fascinated me from the beginning! I kept exploring the RL methods and architectures by myself. For example, the blogs of [The Game is ON!](https://sezan92.github.io/2020/03/22/RL.html) were based on my learning journey. It is still ongoing by the way!
 
-*But there was something missing*. I had some issues with the basic terminologies in the literature. Some of the important algorithms seemed very difficult to me. So I decided to step back and try hone my basics! I tried to read The famous book by "Sutton and Barto" , but the book being a big Text book, it also seemed very hard!
+*But something was missing*. I had some issues with the basic terminologies in the literature. Some of the important algorithms seemed very difficult to me. So I decided to step back and try to hone my basics! I tried to read The famous book by "Sutton and Barto", but the book being a big Textbook, it also seemed very hard!
 
-*I do not know when, I got to know about Reinforcement learning Specialization by the University of Alberta*. In this blog series, I want to share my thoughts/ideas/notes about what I learned from the specialization. I will try to explain in simple language. The specialization is really good. The first blog of this (hopefully) continuing blog series is about Course 1, Week 1 of the specialization. If there is any concern/question/feedback, please do not hesitate to email me at sezan92[at]gmail[dot]com.
+*I do not know when I got to know about the Reinforcement learning Specialization at the University of Alberta*. In this blog series, I want to share my thoughts/ideas/notes about what I learned from the specialization. I will try to explain in simple language. The specialization is really good. The first blog of this (hopefully) continuing blog series is about Course 1, Week 1 of the specialization. If there is any concern/question/feedback, please do not hesitate to email me at sezan92[at]gmail[dot]com.
 
 ## Week 1
 
