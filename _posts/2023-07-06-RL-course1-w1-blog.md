@@ -6,19 +6,19 @@
 
 - This note blog shows my notes on the Reinforcement learning (RL) course 1 Week 1 video
 
-### Story
+### Background
 
-I am an RL enthusiast for a long time. The concept of training an agent based on rewards or punishments fascinated me from the beginning. I kept exploring the RL methods and architectures by myself for a bit of time. For example, the blogs of [The Game is ON!](https://sezan92.github.io/2020/03/22/RL.html) were based on my learning journey. It is still ongoing though!
+I am an RL enthusiast for a long time. The concept of training an agent based solely on the points fascinated me from the beginning! I kept exploring the RL methods and architectures by myself. For example, the blogs of [The Game is ON!](https://sezan92.github.io/2020/03/22/RL.html) were based on my learning journey. It is still ongoing by the way!
 
-But there was something missing. I had some issues with basic terminologies in the literature. Some basic algorithms seemed very difficult for me. I had to step back a bit. I tried to read The famous book by "Sutton and Barto". But still, there was something missing. I do not know what. *Then I got to know about Reinforcement learning Specialization by the University of Alberta*. In this blog series, I want to share my thoughts/ideas/notes about the course. I will try to explain in simple language. The specialization is really good. I learned a lot of things from it. The first blog of this (hopefully) continuing blog series is about Week 1 course 1 of the specialization. Please read. If there is any concern/question/feedback, please do not hesitate to email me at sezan92[at]gmail[dot]com.
+*But there was something missing*. I had some issues with the basic terminologies in the literature. Some of the important algorithms seemed very difficult to me. So I decided to step back and try hone my basics! I tried to read The famous book by "Sutton and Barto" , but the book being a big Text book, it also seemed very hard!
 
-2023/07/12
+*I do not know when, I got to know about Reinforcement learning Specialization by the University of Alberta*. In this blog series, I want to share my thoughts/ideas/notes about what I learned from the specialization. I will try to explain in simple language. The specialization is really good. The first blog of this (hopefully) continuing blog series is about Course 1, Week 1 of the specialization. If there is any concern/question/feedback, please do not hesitate to email me at sezan92[at]gmail[dot]com.
 
-### Week 1
+## Week 1
 
 - Introduced k-arm bandit problem. It is a simple game with multiple buttons. (screenshot). Each button will give you a reward. you need to choose the best button by pressing each button and maximizing the reward. The best similar thing is gambling!! But in our life, we may take decisions by trial and error.
 
-## Update 2023/02/22
+
 
 - Here the instructor gave the example of a clinical trial of a K-armed bandit
 ![k_armed_bandit_clinical_trial_pic_1](https://user-images.githubusercontent.com/11025093/220614930-30ff94e2-c943-4619-a25b-eebf9d7d279e.png)
