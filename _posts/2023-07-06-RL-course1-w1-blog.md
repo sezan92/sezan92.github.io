@@ -18,16 +18,14 @@ I am an RL enthusiast for a long time. The concept of training an agent based so
 
 - In the first week, the instructors introduced k-arm bandit problem. It is a simple game with multiple buttons. Each button will give you a reward. you need to choose the best button by pressing each button and maximizing the reward. The best similar thing is gambling!! But in our life, we may take decisions by trial and error.
 
-The game in the course looks like following, ![k-armed-bandit](/images/RL_1_W1_blog/k-arm-bandits.png)
+    The game in the course looks like following, ![k-armed-bandit](/images/RL_1_W1_blog/k-arm-bandits.png)
 
-
-
-- Here the instructor gave the example of a clinical trial of a K-armed bandit
+- One of the examples of K-armed bandits can be clinical trials
 ![k_armed_bandit_clinical_trial_pic_1](https://user-images.githubusercontent.com/11025093/220614930-30ff94e2-c943-4619-a25b-eebf9d7d279e.png)
 
-The big idea is that suppose a doctor has 3 patients. he doesn't know the medicine. so he trials 3 medicines for 3 patients. if he sees improvement in health in a patient for a certain medicine, he prescribes the medicine.
+    The big idea is that suppose a doctor has 3 patients. he doesn't know the medicine. so he trials 3 medicines for 3 patients. if he sees improvement in health in a patient for a certain medicine, he prescribes the medicine.
 
-- then the instructor defines the action and the reward combined as action value. here the action is the prescription and value is the better health.
+- Let's define action and reward. The action is the prescription of a certain medicine and the value is the effects of the medicine. Progress can be seen as positive reward, while the regress can be seen as negative rewards. The combination of the both is Action value.
 ![k_armed_bandit_action_values_equation](https://user-images.githubusercontent.com/11025093/220615216-d4df1955-58ba-4787-9e3c-7825c7dcbb88.png)
 
 - assuming better health means better blood pressure, the instructor gives intuition by following the illustration
