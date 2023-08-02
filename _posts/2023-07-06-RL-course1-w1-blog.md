@@ -22,21 +22,21 @@ I am an RL enthusiast for a long time. The concept of training an agent based so
     ![k-armed-bandit](/images/RL_1_W1_blog/k-arm-bandits.png)
 
 - One of the examples of K-armed bandits can be clinical trials
-![k_armed_bandit_clinical_trial_pic_1](https://user-images.githubusercontent.com/11025093/220614930-30ff94e2-c943-4619-a25b-eebf9d7d279e.png)
+![k_armed_bandit_clinical_trial_pic_1](/images/RL_1_W1_blog/image_2_clinical_trials.png)
 
     The big idea is that suppose a doctor has 3 patients. he doesn't know the medicine. so he trials 3 medicines for 3 patients. if he sees improvement in health in a patient for a certain medicine, he prescribes the medicine.
 
 - Let's define action and reward. The action is the prescription of a certain medicine and the value is the effects of the medicine. Progress can be seen as positive reward, while the regress can be seen as negative rewards. The combination of the both is Action value.
-![k_armed_bandit_action_values_equation](https://user-images.githubusercontent.com/11025093/220615216-d4df1955-58ba-4787-9e3c-7825c7dcbb88.png)
+![k_armed_bandit_action_values_equation](/images/RL_1_W1_blog/image_3_action-value-equation.png)
 
 - For intuition the instructor shares the following illustration
 
-    ![k_armed_bandit_trial_picture_equation](https://user-images.githubusercontent.com/11025093/220615637-9f057782-791e-44e8-9c52-af9b115d4399.png)
+    ![k_armed_bandit_trial_picture_equation](/images/RL_1_W1_blog/image_4_calculate_medical_trial_action-value.png)
 
     Here, each action $a$ , (i.e. the precsribed medicine)  has an action value $q(a)$ i.e. health state for that specific medicine.
 
 - Our real-life examples
-![k_armed_bandit_other_examples](https://user-images.githubusercontent.com/11025093/220616144-23b61473-6cc1-43a6-8481-a61b2a6cc29a.png)
+![k_armed_bandit_other_examples](/images/RL_1_W1_blog/image_5_k-arm-bandits-other-examples.png)
 
 ### My comments:
 
@@ -50,11 +50,11 @@ Action value is the value of an action. (I know it is not genius to figure it ou
 
 Referring to the example intuition, how can we know the value of prescribing a certain medicine? One of the ways is the "Sample averaging method".
 
-![Screenshot from 2023-03-06 13-19-15](https://user-images.githubusercontent.com/11025093/223018545-601f20f3-fbc0-4b70-97f9-435955f93102.png)
+![Screenshot from 2023-03-06 13-19-15](/images/RL_1_W1_blog/image_6_sample-averaging-method.png)
 
 #### Intuition
 
-For example, if some people had a headache and the doctor decides again to do random trial among the pills  $A$ , $B$, $C$. Suppose for medicine $A$ the headache is cured 90 out of 100 times. for medicine $B$ it is 50 out of 100 times. We can conclude that the action value for $A$ is $90/100$ => $0.9$ . But what about the other 10? They might have other factors, which leads us to the notion of $state$ value. more on that later. 
+For example, if some people had a headache and the doctor decides again to do random trial among the pills  $A$ , $B$, $C$. Suppose for medicine $A$ the headache is cured 90 out of 100 times. for medicine $B$ it is 50 out of 100 times. We can conclude that the action value for $A$ is $90/100$ => $0.9$ . But what about the other 10? They might have other factors, which leads us to the notion of $state$ value. more on that later.
 
 ### Greedy action
 
