@@ -38,13 +38,11 @@ I am an RL enthusiast for a long time. The concept of training an agent based so
 - Our real-life examples
 ![k_armed_bandit_other_examples](/images/RL_1_W1_blog/image_5_k-arm-bandits-other-examples.png)
 
-### My comments:
+- My comments: Although the given example is good for getting an intuitive understanding, it is not a concrete example. First of all, medical trials are not random trials. After many days of research the doctors sort out some candidates to test, and then they make the study trials.
 
-- Although the given example is good for getting and intuitive understanding , we have to keep in mind that it is not a concrete example. Because, for starter, they are not random trials. After many days of research the doctors may get some candidates to test and  then they make the study trial.
+- The instructors could have gone with a simpler example, like which food is best in a country , which singer is the best etc.
 
-- The instructors could have gone with a simpler example, like food for a certain location, etc
-
-### Action value
+## Week 1: Action value
 
 Action value is the value of an action. (I know it is not genius to figure it out). But the question is how can we know the value of an action?
 
@@ -52,23 +50,23 @@ Referring to the example intuition, how can we know the value of prescribing a c
 
 ![Screenshot from 2023-03-06 13-19-15](/images/RL_1_W1_blog/image_6_sample-averaging-method.png)
 
-#### Intuition
+### Intuition
 
-For example, if some people had a headache and the doctor decides again to do random trial among the pills  $A$ , $B$, $C$. Suppose for medicine $A$ the headache is cured 90 out of 100 times. for medicine $B$ it is 50 out of 100 times. We can conclude that the action value for $A$ is $90/100$ => $0.9$ . But what about the other 10? They might have other factors, which leads us to the notion of $state$ value. more on that later.
+For example, suppose the doctor decides again to do random trial among headache pills  $A$ and $B$. For medicine $A$ the headache is cured 90 out of 100 times, for medicine $B$ it is 50 out of 100 times. We can conclude that the action value for $A$ is $90/100$ => $0.9$ . But what about the other 10? They might have other factors - which leads us to the notion of $state$ value- More on that later.
 
 ### Greedy action
 
-Suppose we get action values for all three actions after many trials. When we choose the action with the best action value, this is called greedy action selection. This process of choosing greedy action is known as exploitation.
+Suppose we get action values for all three actions after many trials. When we choose the action with the best action value, this is called *greedy action* selection. This process of choosing greedy action is known as exploitation.
 
-![exploitation](https://user-images.githubusercontent.com/11025093/223735899-4f43cd27-b08f-4acf-ba69-bca4888aecb2.png)
+![exploitation](/images/RL_1_W1_blog/image_7_greedy_action.png)
 
-On the other hand, we also can explore other actions at the expense of getting the best reward. this will let us know more about the actions. this is known, as one might have guessed exploration.
+On the other hand, we also can explore other actions at the probable expense of getting the best reward. This will let us know more about the actions. We call this process -as one might have guessed- *exploration*.
 
-now the problem is, we cannot do both - at least with one model. This is a fundamental problem in the Reinforcement learning problem. known as the `Exploitation Exploration` dilemma.
+Now, the problem is, we cannot do both at the same time. This is a fundamental problem in the Reinforcement learning known as the `Exploitation Exploration` dilemma.
 
-we can rewrite the sample-average method for learning action values as follows,
+We can rewrite the sample-average method for learning action values as follows,
 
-![Screenshot from 2023-03-14 13-14-42](https://user-images.githubusercontent.com/11025093/224891672-873ee138-6926-4469-a73b-e7c5627ec263.png)
+![Screenshot from 2023-03-14 13-14-42](/sezan92.github.io/images/RL_1_W1_blog/image_8_exploration_exploitation.png)
 
 in other words,
 
