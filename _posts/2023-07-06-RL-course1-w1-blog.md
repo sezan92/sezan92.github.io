@@ -66,44 +66,38 @@ Now, the problem is, we cannot do both at the same time. This is a fundamental p
 
 We can rewrite the sample-average method for learning action values as follows,
 
-![Screenshot from 2023-03-14 13-14-42](/sezan92.github.io/images/RL_1_W1_blog/image_8_exploration_exploitation.png)
+![Screenshot from 2023-03-14 13-14-42](/images/RL_1_W1_blog/image_8_exploration_exploitation.png)
 
 in other words,
 
-![Screenshot from 2023-03-14 13-15-45](https://user-images.githubusercontent.com/11025093/224891760-ae8e47c8-85ef-44ae-9960-e796ef95a54b.png)
+![Screenshot from 2023-03-14 13-15-45](/images/RL_1_W1_blog/image_9_incremental_update_equation.png)
 
-in the equation , $\frac{1}{n}$  is known for a limited number of steps. But what if we do not know how many steps will be taken?  For example, we will never know how many moves a game of chess can be won. In those cases, we can write $\alpha$ instead! It is a hyperparameter known as step size. it will dictate how quickly our agent can update the action value.
+In the above equation , we can guess the term $\frac{1}{n}$ for a known number of steps. But what if we do not know how many steps will be taken?  For example, we will never know in how many moves a game of chess can be won. In those kinds of scenarios, we can write $\alpha$ instead! It is a hyperparameter known as step size which will dictate how quickly our agent can update the action value.
 
-![Screenshot from 2023-03-14 13-16-25](https://user-images.githubusercontent.com/11025093/224891839-cee771ec-8256-49bf-84b1-bef8f4a0f8ff.png)
-
-[upto 2:43]
+![Screenshot from 2023-03-14 13-16-25](/images/RL_1_W1_blog/image_10_updated_incremental_update_rule.png)
 
 ### Non-stationary bandit problem
 
-let's look at the equation again,
-![Screenshot from 2023-03-27 14-56-30](https://user-images.githubusercontent.com/11025093/227853320-0cfacce5-6359-40e9-871a-bb6e43838779.png)
+Let's look at the equation again,
+![Screenshot from 2023-03-27 14-56-30](/images/RL_1_W1_blog/image_11_decaying_past_rewards.png)
 
-![Screenshot from 2023-03-27 15-01-49](https://user-images.githubusercontent.com/11025093/227853867-c625f498-0ec8-4921-90f9-533afbe3aaf4.png)
+![Screenshot from 2023-03-27 15-01-49](/images/RL_1_W1_blog/image_12_decaying_past_rewards.png)
 
-from the above two equations, we see that $Q_{n+1}$ depends on the most recent rewards more than the past rewards. making it possible to update over time
+From the above two equations, we see that the term $Q_{n+1}$ depends on the most recent rewards more than the more previous rewards. This is important!
 
-what does the (re-write of) the equation tells us?
+It means that the Action values always give more focus on the recent rewards than the previous ones. **Why is it important?** It helps the model to be updated online! There might be some actions that might be time-dependent. e.g. some medicines might work in one season, but not in others seasons. This equation helps us keep track of recent rewards and let the model learn from the most recent experiences.
 
-it says that the Action values always give more focus on the recent rewards than the previous ones. **Why is it important?** It helps the model be updated. There might be some actions that might be time-dependent. e.g. some medicines might work in one season, but not in others, and vice versa. This equation helps us keep track of recent rewards and let the model learn from the most recent experiences.
+## Exploration Exploitation trade-off
 
-### Exploration Exploitation trade-off
-
-**Video1**
-
-**What is the trade-off**
+### What is the trade-off?
 
 Exploration means the agent tries each action and sees what the action leads to.
 
-Exploitation, on the other hand, means that the agent takes the action with the maximum reward, from his prior knowledge, which is always limited.
+Exploitation, on the other hand, means that the agent takes the action with the maximum rewards possible according to the most updated model.
 
-Now, if we let the agent always explore, the agent will not ever act according to the previous knowledge of best actions; resulting in never maximizing the total rewards. If we always let it exploit, we might miss the information about all plausible state-action pairs! This is known as the **exploration-exploitation dilemma**.
+Now, if we let the agent always explore, the agent will not ever act according to the latest informations of best actions; resulting never maximizing the total rewards! But if we always let it exploit, we might miss the information about all plausible state-action pairs! This is known as the **exploration-exploitation dilemma**.
 
-**Solution?**
+### Solution?
 
 One of the most popular solutions is Epsilon's greedy actions. For certain times let the agent explore, for other times let it exploit! **Then how to know when to do which one?** In this case, what we do, is set a threshold named $\epsilon$. Then generate a random floating point number (0.0-1.0). If the random number is greater than $\epsilon$, explore, otherwise exploit! Naturally, if we want to explore more, we will set the $\epsilon$ lower, otherwise bigger. In the training time, we in general want our agent to explore initially more, and exploit at the end more. So in the beginning the $\epsilon$ is higher, and in the end, it is lower! But there are other methods, this is good as a getting-started solution!
 
