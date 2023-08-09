@@ -99,28 +99,29 @@ Now, if we let the agent always explore, the agent will not ever act according t
 
 ### Solution?
 
-One of the most popular solutions is Epsilon's greedy actions. For certain times let the agent explore, for other times let it exploit! **Then how to know when to do which one?** In this case, what we do, is set a threshold named $\epsilon$. Then generate a random floating point number (0.0-1.0). If the random number is greater than $\epsilon$, explore, otherwise exploit! Naturally, if we want to explore more, we will set the $\epsilon$ lower, otherwise bigger. In the training time, we in general want our agent to explore initially more, and exploit at the end more. So in the beginning the $\epsilon$ is higher, and in the end, it is lower! But there are other methods, this is good as a getting-started solution!
+One of the most popular solutions is known as **Epsilon greedy actions**; which means 
+to let the agent explore initially for a certain time period and for the rest of the time period let it exploit! **How to select the time period?** In this case, what we do is that we set a threshold named $\epsilon$. Then generate a random floating point number (0.0-1.0). If the random number is greater than the $\epsilon$, explore. Otherwise exploit! Naturally, if we want to explore more, we will set the $\epsilon$ higher and vice-versa.
 
 ### For example
 
-suppose for the medical trial of 3 medicines, the optimum values are
+Suppose for the medical trial of 3 medicines, the optimum values are
 $q_1 = 0.25, q_2=0.75, q_3=0.5$
 
-but initially, we do not know the optimum value. how about we start with high initial values,
+But initially we do not know them of course! How about we start with high initial values?
 
 $Q_1 = Q_2 = Q_3 = 2$
 
-now let's remember the incremental update equation,
+Now let's remember the incremental update equation,
 
 $Q_{n+1}  $&larr;$  Q_n + \alpha(R_n - Q_n)$
 
 Let's assume positive feedback has point $1$ and negative has $0$.  After running some trials, we might get closer to the optimum values,
 
-![Screenshot from 2023-04-25 14-08-25](https://user-images.githubusercontent.com/11025093/234179596-b7276248-f531-439f-bd8e-fd25fb9ade24.png)
+![Screenshot from 2023-04-25 14-08-25](/images/RL_1_W1_blog/image_13_high_initial_Q_value.png)
 
 ### Comparison
 
-![compare_performance](https://user-images.githubusercontent.com/11025093/235430182-8dd3a61c-33c7-4861-b2ff-73e879193e02.png)
+![compare_performance](/images/RL_1_W1_blog/image_14_compare_optimistic_realistic_epsilon_greedy.png)
 
 from the image above it seems that the optimistic initial value setting will help us more compared to the epsilon greedy!
 
