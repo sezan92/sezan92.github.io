@@ -99,8 +99,14 @@ Now, if we let the agent always explore, the agent will not ever act according t
 
 ### Solution?
 
+#### Epsilon Greedy Approach
+
 One of the most popular solutions is known as **Epsilon greedy actions**; which means 
-to let the agent explore initially for a certain time period and for the rest of the time period let it exploit! **How to select the time period?** In this case, what we do is that we set a threshold named $\epsilon$. Then generate a random floating point number (0.0-1.0). If the random number is greater than the $\epsilon$, explore. Otherwise exploit! Naturally, if we want to explore more, we will set the $\epsilon$ higher and vice-versa.
+to let the agent explore for a certain probability threshold, and then let it exploit for the other probability. We will generate random number. If it is less than a certain probability, we will let the agent explore , or exploit otherwise. The following is average reward for ![epsilon_greedy](/images/RL_1_W1_blog/image_15_epsilon_greedy_performance.png).
+
+In real situations the agent needs to explore more in the initial phase, and exploit more at the later stages to get the best outcome. In those cases we would prefer **epsilon decay**. In this trick, the epsilon is selected higher at the beginning , and then it is decreased gradually at each step until a minimum threshold!
+
+#### Optimistic initial Value. (TODO: sezan92)
 
 ### For example
 
