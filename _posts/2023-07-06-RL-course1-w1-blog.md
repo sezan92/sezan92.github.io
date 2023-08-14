@@ -4,9 +4,18 @@
 
 ## TLDR
 
-- This note blog shows my notes on the Reinforcement learning (RL) course 1 week 1 video
+- We get introduced to the K-armed bandit problem.
+- Action values concept.
+- Greedy actions.
+- Epsilon greedy action selection, Optimistic Initial action values.
+- Upper Confidence Bound Action selection.
 
-### Background
+### Contact
+
+- Email: sezan92[at]gmai[dot]com
+- Linkedin: [MD MUHAIMIN RAHMAN](www.linkedin.com/in/sezan92)
+
+## Background
 
 I am an RL enthusiast for a long time. The concept of training an agent based solely on the points fascinated me from the beginning! I kept exploring the RL methods and architectures by myself. For example, the blogs of [The Game is ON!](https://sezan92.github.io/2020/03/22/RL.html) were based on my learning journey. It is still ongoing by the way!
 
@@ -42,7 +51,7 @@ I am an RL enthusiast for a long time. The concept of training an agent based so
 
 - The instructors could have gone with a simpler example, like which food is best in a country , which singer is the best etc.
 
-## Week 1: Action value
+## Action value
 
 Action value is the value of an action. (I know it is not genius to figure it out). But the question is how can we know the value of an action?
 
@@ -106,62 +115,76 @@ to let the agent explore for a certain probability threshold, and then let it ex
 
 In real situations the agent needs to explore more in the initial phase, and exploit more at the later stages to get the best outcome. In those cases we would prefer **epsilon decay**. In this trick, the epsilon is selected higher at the beginning , and then it is decreased gradually at each step until a minimum threshold!
 
-#### Optimistic initial Value. (TODO: sezan92)
+#### Optimistic initial Value
 
-### For example
+Another solution is to use Optimistic initial values.
 
-Suppose for the medical trial of 3 medicines, the optimum values are
-$q_1 = 0.25, q_2=0.75, q_3=0.5$
+Let's assume for the medical trial of the three medicines, the optimum action values are
+$q_1 = 0.25, q_2=0.75, q_3=0.5$ respectively.
 
 But initially we do not know them of course! How about we start with high initial values?
 
 $Q_1 = Q_2 = Q_3 = 2$
 
-Now let's remember the incremental update equation,
+From the incremental update equation,
 
 $Q_{n+1}  $&larr;$  Q_n + \alpha(R_n - Q_n)$
 
-Let's assume positive feedback has point $1$ and negative has $0$.  After running some trials, we might get closer to the optimum values,
+Let's assume the positive feedback has point $1$ and negative has $0$.  After running some trials, we might get closer to the optimum values!
 
 ![Screenshot from 2023-04-25 14-08-25](/images/RL_1_W1_blog/image_13_high_initial_Q_value.png)
 
 ### Comparison
 
+So which approach is better ? If we check the comparison plot
+
 ![compare_performance](/images/RL_1_W1_blog/image_14_compare_optimistic_realistic_epsilon_greedy.png)
 
 from the image above it seems that the optimistic initial value setting will help us more compared to the epsilon greedy!
 
-### Demerits
+#### Demerits
 
 - We do not know what is the best optimistic initial value.
-- it is temporary, i.e. after the first initial trials the explorations will get stopped
+- It is temporary, i.e. after the first initial trials the explorations will get stopped
 
-### My opinion
+#### My thoughts
 
-- We can use both epsilon greedy and optimistic initial values.
+- We can use both epsilon greedy and optimistic initial values actually!
 
-### Uppder confidence Action selection
+### Another solution: Uppder confidence Action selection
 
 The Epsilon greedy action selection works the following way
 
-![Screenshot from 2023-06-05 12-22-11](https://github.com/sezan92/sezan92.github.io/assets/11025093/c3f8ea4b-ab22-458f-a6f7-e066aaa368c3)
+![Screenshot from 2023-06-05 12-22-11](/images/RL_1_W1_blog/image_16_epsilon_greedy_how_it_works.png)
 
-Here, for exploration, we are choosing random actions uniformly. The problem is, we are giving the same weight to all random actions. How about while choosing the random action, we can choose the less explored action? In other words, we prioritize the actions with less uncertainty (due to that action being less explored).
+In this approach, we are choosing the random actions with uniform probability distribution. The problem is, we are giving the same weight to all of the random actions. How about while choosing the random action, we can choose the less explored action more ? In other words, we prioritize the actions with less uncertainty (due to that action being less explored)!
 
 For example, the uncertainty can be shown as follows,
 
-![Screenshot from 2023-06-14 17-16-38](https://github.com/sezan92/sezan92.github.io/assets/11025093/0145c603-fb53-4e36-b7bc-10ca2d84af97)
+![Screenshot from 2023-06-14 17-16-38](/images/RL_1_W1_blog/image_17_uncertainty_estimate_UCB.png)
 
-in the process of UCB, we guess that the unknown action is good. i.e. high Q value. and hence called the upper confidence action value.
+For this approach named Upper Confidence Bound selection aka UCB, we guess that the unknown action is good. i.e. with  high Q value.
 
-The equation for UCB combines exploration and exploitation like the following,
+The best part of UCB equatio: It combines the exploration and the exploitation in one single equation!!
 
-![Screenshot from 2023-07-03 15-29-56](https://github.com/sezan92/sezan92.github.io/assets/11025093/3b444071-158c-4399-8d9b-db8bfee511f6)
+![Screenshot from 2023-07-03 15-29-56](/images/RL_1_W1_blog/image_18_ucb_equation.png)
 
-$t$ is the timesteps and $N_t(a)$ means the number of times an action $a$ is being taken. it means that the more we explore an action $a$, the lesser it will have an effect. like the following example,
+Where,
+    - $t$ is the timesteps
+    - $N_t(a)$ means the number of times an action $a$ is being taken. It means that the more we explore an action $a$, the lesser it will have an effect. Like the following example,
 
-![Screenshot from 2023-07-03 15-33-09](https://github.com/sezan92/sezan92.github.io/assets/11025093/ca1ab6ed-a86c-49ee-acaa-fece838f2bea)
+![Screenshot from 2023-07-03 15-33-09](/images/RL_1_W1_blog/image_19_ucb_equation_demonstration.png)
 
-where $c$ is the hyperparameter. on the 10-arm bandit test bed, the performance is as follows,
+Where $c$ is the hyperparameter. on the 10-arm bandit test bed, the performance is as follows,
 
-![Screenshot from 2023-07-03 15-35-20](https://github.com/sezan92/sezan92.github.io/assets/11025093/f60bed21-ac04-446c-819c-49877baec62d)
+![Screenshot from 2023-07-03 15-35-20](/images/RL_1_W1_blog/image_20_ucb_vs_epsilon_greedy.png)
+
+From the above plot, we can conclude that the UCB is performing better compared to the epsilon greedy, despite initial worse performance. 
+
+## Conclusion
+
+In this post I wanted to describe my thoughts and understandings of the video of Reinforcement learning Course 1 week 1. Here we explored the key concepts of Reinforcement learning. It took me a long time to write due to my work schedule. I hope the readers will be patient enough for the Week 2 posts. Till then, for any comments / questions, please contact me by email: sezan92[at]gmail[dot]com  or by [linkedin](www.linkedin.com/in/sezan92)!
+
+## Reference
+
+- All of the screenshots are from the Course 1, Week 1 of Reinforcement learning Specialization.
