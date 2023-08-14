@@ -28,7 +28,7 @@ I am an RL enthusiast for a long time. The concept of training an agent based so
 - In the first week, the instructors introduced the k-arm bandit problem. It is a simple game with multiple buttons. Each button will reward you. you need to choose the best button by pressing each button and maximizing the reward. The best similar thing is gambling!! But in our life, we may take decisions by trial and error.
 
     The game in the course looks like following
-    ![k-armed-bandit](/images/RL_1_W1_blog/k-arm-bandits.png)
+    ![k-armed-bandit](/images/RL_1_W1_blog/image_1_k-arm-bandits.png)
 
 - On the example of K-armed bandits can be clinical trials
 ![k_armed_bandit_clinical_trial_pic_1](/images/RL_1_W1_blog/image_2_clinical_trials.png)
