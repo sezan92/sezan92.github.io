@@ -1,6 +1,6 @@
-# Reinforcement Learning Course 1 Week 1
+# Reinforcement Learning Course 1 Week 2
 
-> Notes for Reinforcement Learning Course 1 Week 1.
+> Notes for Reinforcement Learning Course 1 Week 2.
 
 ## TLDR
 
