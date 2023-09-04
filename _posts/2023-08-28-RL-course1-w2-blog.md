@@ -12,4 +12,4 @@ To start reading this blog, please read the first blog of the series, [Reinforce
 
 ## Markov Decision Process
 
-(TODO). Updo Course1W2 Video [0:57]
+(TODO). Completed W2L1 video. need to summarize.
