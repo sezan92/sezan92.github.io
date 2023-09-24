@@ -4,7 +4,8 @@
 
 ## TLDR
 
-- Introduction to MDPs
+- Introduction to MDP
+- Dynamics of MDP
 
 ### Prerequisites
 
@@ -14,14 +15,37 @@ To start reading this blog, please read the first blog of the series, [Reinforce
 
 ### Problems of K-armed bandit world.
 
-- In the K-armed bandit problem , all actions are the same. For example in a medical trial, we choose medicine from one of the three. We do not choose like, medicine in one time, and the exercise in the other situation, for example. In the real world, we need to choose different actions for different situations.
+- In the K-armed bandit problem, all actions are the same. For example in a medical trial, we choose medicine from one of the three. We do not choose, medicine at one time, and exercise in the other situation, for example. In the real world, we need to choose different actions for different situations.
 
-- The another issue with the K-armed bandit problem does not consider the long term consequences. For example, a patient may heal right away for a medicine A compared to that of medicine B, but it might have some other life time side effects. The K-armed bandit problem do not consider that.
+- Another issue with the K-armed bandit problem does not consider the long-term consequences. For example, a patient may heal right away for medicine A compared to that of medicine B, but it might have some other lifetime side effects. The K-armed bandit problem does not consider that.
 
-### Then how does the real world more like?
+### Then what does the real world more like?
 
-In the real world, we interact with the environment, we get some feedback (it might be positive/ negative or neutral). Then based on the new state we take new actions!. Some thing like this,
+In the real world, we interact with the environment, we get some feedback (it might be positive/ negative or neutral). Then based on the new state we take new actions! Something like this,
 
 ![MDP](/images/RL_1_W2_blog/image_1_MDP_interaction.png)
 
-[upto 5:07]
+where,
+
+$S_t$ : State at time $t$.
+$S_{t+1}$: State after action $A_t$ at time $t+1$
+
+This cycle of $(state, action, new state, reward)$ is known as *Markov Decision Process* (MDP in short).
+
+### Representation of MDP
+
+The mathematical representation of the MDP is as follows
+
+![MDP_Dynamics](/images/RL_1_W2_blog/image_2_MDP_Dynamics.png)
+
+In the above haunted (!) mathematical picture the terms mean as follows,
+
+$p(s', r|s, a)$: It means the probability of a new state and reward given the current state $s$, and action $a$.
+
+We assume the environment is stochastic, and hence it is shown as a probability function. Because of that the summation of probabilities, across all rewards and states is $1$.
+
+[Video 1 done]
+
+## Reference
+
+- All of the screenshots are from Course 1, Week 1 of Reinforcement Learning Specialization.
