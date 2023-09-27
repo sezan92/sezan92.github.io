@@ -44,7 +44,16 @@ $p(s', r|s, a)$: It means the probability of a new state and reward given the cu
 
 We assume the environment is stochastic, and hence it is shown as a probability function. Because of that the summation of probabilities, across all rewards and states is $1$.
 
-[Video 1 done]
+## Real Life Intuition
+
+We can express any real life events or cyles of events as MDP. This is the flexibility power of MDP framework. For example, 5 days-a-week work life. Let's assume the following,
+
+- Your energy level is the state $s$
+- Your commute to and from work , and work at the office is the action $a$.
+
+[explain video 2, make a hand-drawn diagram]
+
+
 
 ## Reference
 
