@@ -63,6 +63,8 @@ From the beginning, your energy level is either high or low. Which are the state
 In the morning you (hopefully) wake up and commute to work.
 ![second](/images/RL_1_W2_blog/image_4_MDP_intuition.PNG)
 
+[TODO: complete step-by-step]
+
 
 ## Reference
 
