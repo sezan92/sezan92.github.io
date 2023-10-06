@@ -49,10 +49,19 @@ We assume the environment is stochastic, and hence it is shown as a probability 
 We can express any real life events or cyles of events as MDP. This is the flexibility power of MDP framework. For example, 5 days-a-week work life. Let's assume the following,
 
 - Your energy level is the state $s$
-- Your commute to and from work , and work at the office is the action $a$.
+- Your commute to work, coming back home, working at the office all are action $a$.
+- For each action, we have state transition probability $p_a$.
 
-[explain video 2, make a hand-drawn diagram]
+Let me first show you a scarry final diagram, ![scary](/images/RL_1_W2_blog/image_10_MDP_intuition.PNG)
 
+### How did we get here?
+
+From the beginning, your energy level is either high or low. Which are the states.
+
+![first](/images/RL_1_W2_blog/image_3_MDP_intuition.PNG)
+
+In the morning you (hopefully) wake up and commute to work.
+![second](/images/RL_1_W2_blog/image_4_MDP_intuition.PNG)
 
 
 ## Reference
