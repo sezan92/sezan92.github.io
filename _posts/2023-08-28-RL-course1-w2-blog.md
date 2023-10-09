@@ -63,7 +63,30 @@ From the beginning, your energy level is either high or low. Which are the state
 In the morning you (hopefully) wake up and commute to work.
 ![second](/images/RL_1_W2_blog/image_4_MDP_intuition.PNG)
 
-[TODO: complete step-by-step]
+The world is not deterministic my friend! "Probably" you will go to work, or probably no!. So let us give this going to work a probability, $p_a= \alpha$ . So, if you somehow stay at home, that would have probability , $(1-\alpha)$!
+![third](/images/RL_1_W2_blog/image_5_MDP_intuition.PNG).
+
+If you stay at home, you will get some negative feedbacks from the office!  Let us say, you will get, reward $r=-1$. If you go to office, you will get reward $r=+1$.
+
+![fourth](/images/RL_1_W2_blog/image_6_MDP_intuition.PNG)
+
+Again, you may work at the office, or waste your time! Let us say you work at the office with the probability $p_a=\beta$. You will get the reward of $10$. But because of that , your energy will decrease!
+
+![fifth](/images/RL_1_W2_blog/image_7_MDP_intuition.PNG).
+
+After you finish your work, you get back home. But you may not! If you get back home with the probability of $\gamma$, you will get the negative reward (because your company likes "Hard working" people who overtime!) of $r=-1$.
+
+![sixth](/images/RL_1_W2_blog/image_8_MDP_intuition.PNG)
+
+But if you stay late (with the probability of $1-\gamma$), and work overtime? You get reward, $r=+5$.
+
+![seventh](/images/RL_1_W2_blog/image_9_MDP_intuition.PNG)
+
+
+### What we see from the above plots?
+
+The power of Markov Decision Process lies in that , we can convert any situations into a pair of $state, action, probability, reward$!! This helps us  formalize any problem anywhere!
+
 
 
 ## Reference
