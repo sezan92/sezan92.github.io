@@ -88,6 +88,11 @@ But if you stay late (with the probability of $1-\gamma$), and work overtime? Yo
 The power of Markov Decision Process lies in that , we can convert any situations into a pair of $state, action, probability, reward$!! This helps us  formalize any problem anywhere!
 
 
+## Goal of the Reinforcement Learning
+
+In one sentance, the goal of the reinforcement learning is to maximize the future rewards.
+[summarize W2L3 video]
+
 
 ## Reference
 
