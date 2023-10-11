@@ -91,7 +91,9 @@ The power of Markov Decision Process lies in that , we can convert any situation
 ## Goal of the Reinforcement Learning
 
 In one sentance, the goal of the reinforcement learning is to maximize the future rewards.
-[summarize W2L3 video]
+What do we mean by that ?
+
+Well, in the above example of MDP, if we always prioritize the immediate reward, what will happen? If we are asleep to keep our energy high, one day we will run out of money and we will starve! If we keep working to get rewards from the companies, we will lose our personal lives , families,and energy! So what do we need? Maximizing the future rewards! We need both work and personal lives to have the best of all worlds! This is always the goal of any RL agent!!
 
 
 ## Reference
