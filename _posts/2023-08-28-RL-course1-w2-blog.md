@@ -52,7 +52,7 @@ We can express any real life events or cyles of events as MDP. This is the flexi
 - Your commute to work, coming back home, working at the office all are action $a$.
 - For each action, we have state transition probability $p_a$.
 
-Let me first show you a scarry final diagram, ![scary](/images/RL_1_W2_blog/image_10_MDP_intuition.PNG)
+Let me first show you a scarry final diagram, ![scary](/images/RL_1_W2_blog/image_9_MDP_intuition.PNG)
 
 ### How did we get here?
 
