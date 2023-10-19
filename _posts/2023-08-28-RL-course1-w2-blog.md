@@ -95,6 +95,12 @@ What do we mean by that ?
 
 Well, in the above example of MDP, if we always prioritize the immediate reward, what will happen? If we are asleep to keep our energy high, one day we will run out of money and we will starve! If we keep working to get rewards from the companies, we will lose our personal lives , families,and energy! So what do we need? Maximizing the future rewards! We need both work and personal lives to have the best of all worlds! This is always the goal of any RL agent!!
 
+## The reward Hypothesis
+
+This video is very important about the philosophy behind Reinforcement learning. The video is craftfully presented by Michael Littman. The basic idea of Reinforcement learning is that we do not teach the agent the exact actions. Rather we feed them the rewards for a certain action at a certain state. From these informations the agents should learn the correct actions to maximize the total or cumulative rewards.
+
+
+Now this idea has an assumption. That is, the environment is giving us back the correct rewards. But in real life do we get the correct rewards? time: 4:14
 
 ## Reference
 
