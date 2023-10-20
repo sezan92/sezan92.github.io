@@ -100,7 +100,9 @@ Well, in the above example of MDP, if we always prioritize the immediate reward,
 This video is very important about the philosophy behind Reinforcement learning. The video is craftfully presented by Michael Littman. The basic idea of Reinforcement learning is that we do not teach the agent the exact actions. Rather we feed them the rewards for a certain action at a certain state. From these informations the agents should learn the correct actions to maximize the total or cumulative rewards.
 
 
-Now this idea has an assumption. That is, the environment is giving us back the correct rewards. But in real life do we get the correct rewards? time: 4:14
+Now this idea has an assumption. That is, the environment is giving us back the correct rewards. But in real life do we get the correct rewards? Or, how can we define the correct rewards? For stock market problems, we can easily set the monetary value as rewards. When you buy stocks you lose money, when you profit, you gain money! There is a "common currency"! But what about thermostats in the AC? How can you measure your comfort zone and the energy cost for achieving it? No common currency!
+
+We can set the goals as rewards. 5:25
 
 ## Reference
 
