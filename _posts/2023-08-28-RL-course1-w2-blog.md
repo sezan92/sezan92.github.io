@@ -102,7 +102,9 @@ This video is very important about the philosophy behind Reinforcement learning.
 
 Now this idea has an assumption. That is, the environment is giving us back the correct rewards. But in real life do we get the correct rewards? Or, how can we define the correct rewards? For stock market problems, we can easily set the monetary value as rewards. When you buy stocks you lose money, when you profit, you gain money! There is a "common currency"! But what about thermostats in the AC? How can you measure your comfort zone and the energy cost for achieving it? No common currency!
 
-We can set the goals as rewards. 5:25
+We can set the goals as rewards. If you take step, you get -1 reward, when you receive the goal , you stop getting negative rewards. This is known as action-penalty representation. Otherwise, you achieve 0 for any action, 1 for goal. This is known as goal-reward representation. But there are some problems with this. The first one has a problem of getting stuck somewhere without reaching the goal. The second one does not create any urgency for the agent! Both have a problem if the goal is after really long sequence of actions!
+
+For example, if you give the agent +1 for achieving the Nobel prize, and 0 otherwise, the agent will not have enough information to go towards the right direction at all! upto 7:11
 
 ## Reference
 
