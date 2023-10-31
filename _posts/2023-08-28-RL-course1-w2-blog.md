@@ -104,7 +104,17 @@ Now this idea has an assumption. That is, the environment is giving us back the 
 
 We can set the goals as rewards. If you take step, you get -1 reward, when you receive the goal , you stop getting negative rewards. This is known as action-penalty representation. Otherwise, you achieve 0 for any action, 1 for goal. This is known as goal-reward representation. But there are some problems with this. The first one has a problem of getting stuck somewhere without reaching the goal. The second one does not create any urgency for the agent! Both have a problem if the goal is after really long sequence of actions!
 
-For example, if you give the agent +1 for achieving the Nobel prize, and 0 otherwise, the agent will not have enough information to go towards the right direction at all! upto 7:11
+For example, if you give the agent +1 for achieving the Nobel prize, and 0 otherwise, the agent will not have enough information to go towards the right direction at all!
+
+### How to define rewards
+
+Programming is the most common way to define the rewards. Sit down understand the dynamics of the environment, and then define the rewards. Another research is the use of temporal logic. 
+
+Another interesting way is getting rewards form human beings. This is known as `human-in-the-loop`. In this case  the human beings will be like guides to the agents. The best example is RLHF, reinforcement learning with human feedback used in ChatGPT. 
+
+The other way is to mimic rewards from another agent (likely human beings). The most interesting application is Inverse reinforcement learning. Where the agent learns the rewards based on behaviours. 
+
+The other ways mentioned are Evolutionary optimization , Meta RL etc. upto 9:30
 
 ## Reference
 
