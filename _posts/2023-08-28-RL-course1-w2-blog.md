@@ -116,6 +116,16 @@ The other way is to mimic rewards from another agent (likely human beings). The 
 
 The other ways mentioned are Evolutionary optimization , Meta RL etc. upto 9:30
 
+### Challenges to the Hypothesis
+
+- How to represent risk-sensitive behaviour? The behaviours which may be best to maximize your total rewards, but also cause you to risk? [Example?]
+
+- How about some diversity in behaviour? Classic example is the music recommendation. No matter how much you like a song, after listening to it repeatatively will make it boring! The reward hypothesis do not endorse the diversity unless we can tweak the system for some exploration!
+
+- Another problem is , can we model human behaviour solely on maximizing rewards? For example if you cheat in exam, you will get high rewards, but cheating is bad! The reward hypothesis do not consider how you get the maximum reward! But humans do have ethical issues outside of the reward hypothesis!
+
+Anyway, these challenges to the reward hypothesis lead us to the future research of Reinforcement learning!
+
 ## Reference
 
 - All of the screenshots are from Course 1, Week 1 of Reinforcement Learning Specialization.
