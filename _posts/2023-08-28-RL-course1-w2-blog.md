@@ -126,6 +126,17 @@ The other ways mentioned are Evolutionary optimization , Meta RL etc. upto 9:30
 
 Anyway, these challenges to the reward hypothesis lead us to the future research of Reinforcement learning!
 
+## Episodic Tasks and Continuing Tasks
+
+Till now, all the discussions were related to the tasks or works assuming the task will end once! What if it doesn't? For example, if we are playing a game of football - some call it soccer - the game will end after 90 minutes assuming no extra time. This kind of tasks are known as episodic tasks. What if it is a Badminton match? There is no time bound! Only when one player can score 21 points , the game is over! This can be summarized as a type of Continuous task! Or suppose from a real world example, Refrigerator. The refrigerator is always on! Continuous task!
+
+### Discounting
+
+Related to the task being Episodic or Continuous, the definition of Expected reward will be affected. For an episodic task, the total expected reward is, 
+
+$G_t = R_1 + \gammaR_2 + {\gamma}^2R_3 + ......{\gamma}^{n-1}R_n$
+[To be continued...]
+
 ## Reference
 
 - All of the screenshots are from Course 1, Week 1 of Reinforcement Learning Specialization.
