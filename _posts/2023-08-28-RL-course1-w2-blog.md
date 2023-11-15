@@ -134,7 +134,7 @@ Till now, all the discussions were related to the tasks or works assuming the ta
 
 Related to the task being Episodic or Continuous, the definition of Expected reward will be affected. For an episodic task, the total expected reward is, 
 
-$G_t = R_1 + \gammaR_2 + {\gamma}^2R_3 + ......{\gamma}^{n-1}R_n$
+$G_t = R_1 + {\gamma}R_2 + {\gamma}^2R_3 + ......{\gamma}^{n-1}R_n$
 [To be continued...]
 
 ## Reference
