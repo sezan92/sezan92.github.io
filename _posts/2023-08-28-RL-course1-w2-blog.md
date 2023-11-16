@@ -135,7 +135,24 @@ Till now, all the discussions were related to the tasks or works assuming the ta
 Related to the task being Episodic or Continuous, the definition of Expected reward will be affected. For an episodic task, the total expected reward is, 
 
 $G_t = R_1 + {\gamma}R_2 + {\gamma}^2R_3 + ......{\gamma}^{n-1}R_n$
-[To be continued...]
+
+The coefficient ${\gamma}$ is known as discount factor whereas $0 < \gamma < 1$. What does it do ? It signifies how much attention or focus should be given to the immediate rewards at a given state. In general we want to give more focus on the immediate rewards, and less focus on later rewards. That is why from the equation, we can see that the later rewards are given less focus by multiplient to the lower values of $\gamma$.
+
+Let's see the equation ,
+
+$G_t = R_t + {\gamma}R_{t+1} + {\gamma}^2R_{t+2} + ......{\gamma}^{n-1}R_{t+n-1}$
+
+or
+
+$G_t = R_t + {\gamma}\{R_{t+1} + {\gamma}R_{t+2} + ......{\gamma}^{n-2}R_{t+n-1}\}$
+
+or 
+
+$G_t = R_t + {\gamma}G_{t+1}$
+
+In other words, the expected rewards at time step $t$ can is equal to the sum of immediate reward and the expected rewards at time step $t+1$. 
+
+How is the equation relevant ? It can help us for continuing tasks where we are not sure about the last step rewards, but we can still estimate the expected rewards! More on that later.
 
 ## Reference
 
