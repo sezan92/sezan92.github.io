@@ -12,4 +12,4 @@ Previous blog, [Reinforcement learning specialization, Course 1, week 2](https:/
 
 ## Policies!
 
-upto W3V2 1.09.
+Completed W3V2. summarize.
