@@ -21,4 +21,12 @@ This can be shown as
 
 ![image](/images/RL_1_W3_blog/image_1_Deterministic_policy.png)
 
+For our example, we can say,
 
+| State ($s$)    | Action ($a = \pi (s)$) |
+|----------|--------|
+| Monday   | Work   |
+| Saturday | Sleep  |
+
+But this does not take into account the fact of randomness!
+[start about stochastic policy]
