@@ -40,3 +40,15 @@ We can write like
 | Saturday | P(action=sleep\|state)=$0.9$  |
 
 This is not 100% accurate, but you will get the idea. This policy is known as the *Stochastic Policy*.
+
+The stochastic policy is shown as $\pi (a \|s)$ meaning probability of action $a$ over the state $s$ . 
+
+Because it is a probability, then it must follow two rules,
+
+$ \sum \pi (a \|s) = 1 $
+
+and
+
+$ \pi (a \| s) \geq 0 $
+
+[start from value functions.]
