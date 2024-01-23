@@ -51,4 +51,17 @@ and
 
 $ \pi (a \| s) \geq 0 $
 
-[start from value functions.]
+## Value Function
+
+Let us go back to our weekday-work-weekend-sleep example. For Monday we will work, for Saturday we will sleep. What about Sunday and Friday? I do not know about others. What happens to me is that I start to get sleepy in the Fridays! Because I keep thinking , saturday is coming! On the other hand, in the sundays I start to get prepared for work!
+
+| State ($s$)    | Action ($a = \pi (s) = P(action\|state)$) |
+|----------|--------|
+| Monday   | P(action=work\|state)=$0.9$   |
+| Friday | P(action=sleep\|state)=$0.4$ , P(action=work\|state) = $0.6$  |
+| Saturday | P(action=sleep\|state)=$0.9$  |
+| Sunday | P(action=sleep\|state)=$0.6$, P(action=work\|state) = $0.4$ |
+
+Here we can call the Monday starting state, and the Saturday as terminal state (for now.) The states closer to the starting and terminal states are affected by the respective terminal states , right? This phenomenon can be expressed using value function!
+
+[TBC 2024/01/23]
