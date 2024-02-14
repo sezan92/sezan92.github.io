@@ -4,6 +4,8 @@
 
 ## TLDR
 
+- Introduction to Policies
+- Evaluation of the Policies
 
 ### Prerequisites
 
