@@ -27,6 +27,8 @@ For each state we will get different equation right? From the equations we shoul
 
 ![](/images/RL_1_W4_blog/image_2_LinearSolver_DP.png) [upto 2:21]
 
+
+
 ## Control
 
 Control in this domain means improving the policy. How do we know which policy is better policy? Simple! The policy for which, the value of the same states are greater! If the $v_{\pi2}$ for all states are greater than $v_{\pi1}$ , then we can tell $\pi_1$ is better than $\pi_2$ ! What if the policys values are not greater but equal to the all of previous policies? We can assume that we have converged to the optimal policy!
@@ -34,4 +36,11 @@ Control in this domain means improving the policy. How do we know which policy i
 ![](/images/RL_1_W4_blog/image_3_Control_improving_policy.png)
 
 *Note* there is a mention of "strictly" better policy, I am not sure what does that mean. I will check in the book if I can get better idea!
-[upto 3:24]
+
+### How will we use Dynamic Programming? 
+
+Well, to be honest, the it will become more clear as the course and hence this blog progresses! But in short, the dynamic programming will be used to approximate the optimal value and the optimal model of the environment to get the optimal policy!. More on that later!
+
+## Iterative Policy Evaluation
+Video 4 Upto [0:36]
+## Reference
