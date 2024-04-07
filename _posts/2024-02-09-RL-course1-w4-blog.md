@@ -59,6 +59,6 @@ What does it mean? It means, using the bellman equation we got better at estimat
 
 *Note*: It seems that the $v_k$ is improving iteratively, need some proving which was not given by the video
 
-Upto 2:12
+Upto 2:12 (read upto 6:51, need to make good writeup.)
 
 ## Reference
