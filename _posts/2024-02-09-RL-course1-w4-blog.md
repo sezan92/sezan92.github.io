@@ -59,26 +59,7 @@ What does it mean? It means, using the bellman equation we got better at estimat
 
 ### Intuition
 
-How can we understand the iterative policy evaluation? Let me give an intuitive example from my life! Many times I forget where I have put my smartphone. I need to find them whenever I lose them temporarily. I also have a smart home speaker which has the ability to ring my phone whenever it is "lost". The policy I will take, is I will "go" to the estimated location based on the ringing of my "phone". The "state" is ringing or not ringing. The "action" is moving towards the source of the ringing. Now I do not know , exactly in which room my phone is. Only thing I have is the "ringing" state, "moving" action , and saying my "speaker" to ring my phone! Okay we can summarize, 
-
-- $\pi$ <- move towards the sound
-- $s_t$ <- ringing or not ringing
-
-How can we evaluate this policy then ? 
-
-At first ringing I will go towards the sound source. I have found no phone! Negative reward 
-
-- $R$ <- -100
-The state before the location is
-- $v_\pi$ -> $v_s + \gamma R$ 
-
-Suppose the value of the previous state was 0, and the $\gamma$ is 0.9
-then
-
-$v_\pi -> -99$
-
-
-
+![intuition](/images/RL_1_W4_blog/image_6_policy_evaluation_intuition.png)
 
 *Note*: It seems that the $v_k$ is improving iteratively, need some proving which was not given by the video
 
