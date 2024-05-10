@@ -63,6 +63,15 @@ What does it mean? It means, using the bellman equation we got better at estimat
 
 *Note*: It seems that the $v_k$ is improving iteratively, need some proving which was not given by the video
 
-Upto 2:12 (read upto 6:51, need to make good writeup.)
+Got an intuition, 
+
+```mermaid
+Car  0.5 probability-> B -> 0.1 probability goal, 0.9 probability no goal
+Car 0.5 probability -> C -> 0.9 probability goal , 0.1 probability no goal
+Reaching the goal will give +10 reward
+Not reaching th egoal will give 0 reward
+
+Calculate the values of the B and C and show how iteratively we can ge the value of the random policy.
+```
 
 ## Reference
