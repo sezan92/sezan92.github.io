@@ -73,6 +73,12 @@ That means, given the state, the car has 50% chance to move to the upper state o
 
 ![image2](/images/RL_1_W4_blog/image_7_first_state.png)
 
+Using the equation above 
 
+reward $r=0$, final state value is the reward $-1$ or $1$
+
+$v_s = 0.9 * (0 + (-1)) + 0.1 * (0 + 1)$
+
+or, $v_s = -0.8$
 
 ## Reference
