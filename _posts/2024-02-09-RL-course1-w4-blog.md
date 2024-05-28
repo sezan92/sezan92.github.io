@@ -65,6 +65,14 @@ What does it mean? It means, using the bellman equation we got better at estimat
 
 Got an intuition, 
 
+Let's suppose , you are in a car which moves randomly (hopefully you DO NOT drive such cars!).  The probability distribution and rewards are as follows, 
+
+![image](/images/RL_1_W4_blog/image_6_initial.png)
+
+That means, given the state, the car has 50% chance to move to the upper state or lower state. If it reaches the upper state, then according to the diagram, it will have 90% probability to reach the the state with reward $-1$ . But if it reaches the lower state, it has 90% probability to reach the state with reward $1$. In that case, for the upper state we can calculate the value $v_s$
+
+![image2](/images/RL_1_W4_blog/image_7_first_state.png)
+
 
 
 ## Reference
