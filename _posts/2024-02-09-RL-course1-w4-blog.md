@@ -59,11 +59,9 @@ What does it mean? It means, using the bellman equation we got better at estimat
 
 ### Intuition
 
-![intuition](/images/RL_1_W4_blog/image_6_policy_evaluation_intuition.png)
-
 *Note*: It seems that the $v_k$ is improving iteratively, need some proving which was not given by the video
 
-Got an intuition, 
+Got an intuition!
 
 Let's suppose , you are in a car which moves randomly (hopefully you DO NOT drive such cars!).  The probability distribution and rewards are as follows, 
 
@@ -73,12 +71,25 @@ That means, given the state, the car has 50% chance to move to the upper state o
 
 ![image2](/images/RL_1_W4_blog/image_7_first_state.png)
 
-Using the equation above 
+Using the equation above
 
 reward $r=0$, final state value is the reward $-1$ or $1$
 
 $v_s = 0.9 * (0 + (-1)) + 0.1 * (0 + 1)$
 
 or, $v_s = -0.8$
+
+We can calulate same value for the lower state.
+
+![image3](/images/RL_1_W4_blog/image_8_second_state_value.png)
+
+Now, we did not know the initial states value, right? From the same process, we can get the initial state value,
+
+![initial_state_value_image](/images/RL_1_W4_blog/image_9_final_state.png)
+
+It seems $vs=0$ ! It means no value? Yes! Because , by being on the initial state *ONLY* , there IS NO BENEFIT! As the process is completely random!!!
+
+I hope the intution tries to help the readers understand about the bellman equation better!
+
 
 ## Reference
