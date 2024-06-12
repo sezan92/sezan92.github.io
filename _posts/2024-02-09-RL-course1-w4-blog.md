@@ -91,5 +91,24 @@ It seems $vs=0$ ! It means no value? Yes! Because , by being on the initial stat
 
 I hope the intution tries to help the readers understand about the bellman equation better!
 
+## Iterative Policy Improvement
+
+Now suppose, you had enough with that randomly selecting car! Now you know the value of each state , so you decided to do somethin! What did you do? you went to the next state with the higher value than that of yours! I mean that is the point of value , isn't it?!
+
+![greedy](/images/RL_1_W4_blog/image_10_greedy_policy.png)
+
+In that case , you go to the goal state pretty easily!!! Pretty common sense huh?
+
+So because you just went to the states with higher value than yours, we can say you were "greedy". This kind of thinking, to change the policy $\pi$ into $\pi '$ is called *Greedy Policy* . Because you are greedy after all! The idea of policy improvement theorem is that, 
+
+suppose you have value $q(s, \pi(s))$ for all states $s$ . Then at the next iteration, you choose new policy $\pi '(s)$ , which is to choose action with highest value $q(s, \pi(s))$ , then $\pi '$ must better or at least equal to the $\pi(s)$ ! In mathematical terms
+
+$\begin{equation}
+\pi ' (s) = \displaystyle\argmax_{a} \displaystyle\sum_{s'}\displaystyle\sum_r p(s' , r |s, a)[r + \gamma v_{\pi}(s')]
+\end{equation}
+$
+then , 
+$ \pi ' >= \pi $
+
 
 ## Reference
