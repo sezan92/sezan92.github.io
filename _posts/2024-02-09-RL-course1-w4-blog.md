@@ -91,7 +91,7 @@ It seems $vs=0$ ! It means no value? Yes! Because , by being on the initial stat
 
 I hope the intution tries to help the readers understand about the bellman equation better!
 
-## Iterative Policy Improvement
+## Policy Improvement
 
 Now suppose, you had enough with that randomly selecting car! Now you know the value of each state , so you decided to do somethin! What did you do? you went to the next state with the higher value than that of yours! I mean that is the point of value , isn't it?!
 
@@ -107,8 +107,25 @@ $\begin{equation}
 \pi ' (s) = \displaystyle\argmax_{a} \displaystyle\sum_{s'}\displaystyle\sum_r p(s' , r |s, a)[r + \gamma v_{\pi}(s')]
 \end{equation}
 $
-then , 
-$ \pi ' >= \pi $
 
+$\begin{equation}
+\implies \pi ' >= \pi 
+\end{equation}$
+
+## Policy Iteration
+
+From the equation $(3)$, we see that the greedy policy should be better than the policy on which the value function is calculated. Suppose for policy $\pi_1$, we get value $v(\pi_1)$. Based on the $v(\pi_1)$ , we get greedy policy $\pi_2$ . Something like the following, 
+
+$ \pi_1 \rightarrow v(\pi_1) \rightarrow \pi_2 \rightarrow v(\pi_2) \rightarrow ....\pi^*  $
+
+whereas $\pi^*$ is the optimal policy. 
+
+We can see a loop going on here,
+
+![image11](/images/RL_1_W4_blog/image_11_policy_iteration.png)
+
+### What if the initial policy is too bad?
+
+This is personal note, in the more complex problems the initial policy also dictates if we can truly reach the optimal policy or not! These issues will come in the later blogs!
 
 ## Reference
