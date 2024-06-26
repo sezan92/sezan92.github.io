@@ -128,4 +128,30 @@ We can see a loop going on here,
 
 This is personal note, in the more complex problems the initial policy also dictates if we can truly reach the optimal policy or not! These issues will come in the later blogs!
 
+## Generalized Policy Iteraction
+
+From the above car example, we used the equation (2).
+
+$v_{k+1} (s) = \displaystyle\sum_a \pi(a|s) \displaystyle\sum_{s'}\displaystyle\sum_r p(s', r|s, a)[r + \gamma v_k (s')]$
+
+We calculated value for every probable action from a given state. But at the end, we only took the "greedy" option. What if , while calculating the value of a state, we only calculate the value for the action with the maximum next value? Then within one pass, we would get the value right? 
+
+![](/images/RL_1_W4_blog/image_12_general_iterative_policy_framework.png)
+
+then we can also get the value of the initial state, 
+
+![](/images/RL_1_W4_blog/image_13_general_policy_iteration.png)
+
+This took only 2 steps! We can call this General Policy Iteration framework.
+
+Now the equation becomes
+
+$\begin{equation}
+v_{k+1} (s) = max_a\displaystyle\sum_{s'}\displaystyle\sum_r p(s', r|s, a)[r + \gamma v_k (s')]
+\end{equation}$
+
+Because in this case, we are not checking the policy evaluation directly, we call this method `Value Iteration`.
+
+In the next section, we wil discuss about Dynamic Programming and its efficiency.
+
 ## Reference
