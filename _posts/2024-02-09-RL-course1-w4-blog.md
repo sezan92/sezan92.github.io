@@ -152,6 +152,10 @@ v_{k+1} (s) = max_a\displaystyle\sum_{s'}\displaystyle\sum_r p(s', r|s, a)[r + \
 
 Because in this case, we are not checking the policy evaluation directly, we call this method `Value Iteration`.
 
-In the next section, we wil discuss about Dynamic Programming and its efficiency.
+
+TODO (sezan): intuitively explain the efficiency of our current method. Dynamic programming.
+## Dynamic Programming Efficiency
+
+
 
 ## Reference
