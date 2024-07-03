@@ -12,7 +12,7 @@
 - [Reinforcement learning specialization, Course 1, Week 1](https://sezan92.github.io/2023/08/14/RL-course1-w1-blog.html).
 - [Reinforcement learning specialization, Course 1, Week 2](https://sezan92.github.io/2023/11/17/RL-course1-w2-blog.html).
 - [Reinforcement Learning specialization, Course 1, Week 3](https://sezan92.github.io/2023/11/21/RL-course1-w3-blog.html)
-- [Reinforcement Learning specialization, Course 1, Week 4](https://sezan92.github.io/2023/07/03/RL-course1-w4-blog.html)
+- [Reinforcement Learning specialization, Course 1, Week 4](https://sezan92.github.io/2024/07/03/RL-course1-w4-blog.html)
 
 ### Course 2
 TBA in sha Allah
