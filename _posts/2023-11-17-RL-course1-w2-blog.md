@@ -158,7 +158,7 @@ $G_t = R_t + {\gamma}R_{t+1} + {\gamma}^2R_{t+2} + ......$
 
 or
 
-$G_t = R_t + {\gamma}\{R_{t+1} + {\gamma}R_{t+2} + ......}$
+$G_t = R_t + {\gamma}\{R_{t+1} + {\gamma}R_{t+2} + ......$
 
 or 
 
