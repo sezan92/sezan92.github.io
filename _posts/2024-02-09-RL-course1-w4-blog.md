@@ -16,7 +16,7 @@ Previous blog, [Reinforcement Learning Course 1, Week 3](https://sezan92.github.
 
 From the previous blog, we learned about a state's value. We can denote this as $v(s)$. Now, the value of a state will depend on two things. One is how easily we can get the maximum reward from the state. Two is what action we will take, i.e., what policy we will follow in that state! We can denote it as $v_{\pi}(s)$. Which means the "value of a state while following the policy $\pi$."
 
-![](/images/RL_1_W4_blog/image_1_Policy_Evaluation.png)
+![image1](/images/RL_1_W4_blog/image_1_Policy_Evaluation.png)
 
 From the first blog, we can recall
 $
@@ -27,13 +27,13 @@ $
 
 For each state, we will get a different equation. From the equations, we should be able to solve and get the optimum value $v_{\pi}$! But the problem is that in practice, the states are often continuous! That means infinite states, and hence, infinite equations are possible! Not to mention, for different policies, $\pi$, the equations will change! So what do we do? We go for an iterative solution! We use dynamic programming algorithms (yeah, that dynamic programming is used in problem-solving!).
 
-![](/images/RL_1_W4_blog/image_2_LinearSolver_DP.png)
+![image2](/images/RL_1_W4_blog/image_2_LinearSolver_DP.png)
 
 ## Control
 
 Control in this domain means improving the policy. How do we know which policy is better? Simple! The policy for which the value of the same states is greater! If the $v_{\pi2}$ for all states are greater than $v_{\pi1}$ , then we can tell $\pi_1$ is better than $\pi_2$ ! What if the police values are not greater but equal to all of the previous policies? We can assume that we have converged to the optimal policy!
 
-![](/images/RL_1_W4_blog/image_3_Control_improving_policy.png)
+![image3](/images/RL_1_W4_blog/image_3_Control_improving_policy.png)
 
 *Note* there is a mention of "strictly" better policy; I am not sure what that means. I will check in the book to get a better idea!
 
@@ -53,7 +53,7 @@ $
 
 What does it mean? Using the Bellman equation, we got better at estimating the optimum value function!! If we do this overall state-specific "iterations," we should get the optimum value function!! When do we know the value function has reached the optimal value? When the value functions are not changing! Because the $v_{\pi}$ has only one unique solution to the bellman equation.
 
-![](/images/RL_1_W4_blog/image_5_vk_vpi.png)
+![image4](/images/RL_1_W4_blog/image_5_vk_vpi.png)
 
 ### Intuition
 
@@ -63,11 +63,11 @@ I have an intuition!
 
 Suppose you are in a car that moves randomly (hopefully you DO NOT drive such cars!). The probability distribution and rewards are as follows, 
 
-![image](/images/RL_1_W4_blog/image_6_initial.png)
+![image5](/images/RL_1_W4_blog/image_6_initial.png)
 
 That means, given the state, the car has a 50% chance of moving to the upper or lower state. If it reaches the upper state, then according to the diagram, it will have a 90% probability of reaching the state with a reward of $-1$. But if it reaches the lower state, it has a 90% probability of reaching the state with a reward of $1$. In that case, for the upper state, we can calculate the value $v_s$
 
-![image2](/images/RL_1_W4_blog/image_7_first_state.png)
+![image6](/images/RL_1_W4_blog/image_7_first_state.png)
 
 Using the equation above
 
@@ -79,7 +79,7 @@ or, $v_s = -0.8$
 
 We can calculate the same value for the lower state.
 
-![image3](/images/RL_1_W4_blog/image_8_second_state_value.png)
+![image7](/images/RL_1_W4_blog/image_8_second_state_value.png)
 
 Now, we do not know the initial state value. From the same process, we can get the initial state value,
 
@@ -134,11 +134,11 @@ $v_{k+1} (s) = \displaystyle\sum_a \pi(a|s) \displaystyle\sum_{s'}\displaystyle\
 
 We calculated the value for every probable action from a given state. In the end, we only took the "greedy" option. What if, while calculating the value of a state, we only calculated the value for the action with the maximum next value? Then, within one pass, we would get the value. 
 
-![](/images/RL_1_W4_blog/image_12_general_iterative_policy_framework.png)
+![image12](/images/RL_1_W4_blog/image_12_general_iterative_policy_framework.png)
 
 then, we can also get the value of the initial state, 
 
-![](/images/RL_1_W4_blog/image_13_general_policy_iteration.png)
+![image13](/images/RL_1_W4_blog/image_13_general_policy_iteration.png)
 
 This took only two steps! We can call this the General Policy Iteration framework.
 
@@ -168,3 +168,8 @@ There are other approaches.
 That is why the dynamic programming approach is the best. But here is a caveat! We **assumed**
 we know the model dynamics! What if we do not?!! We can explain those in later chapters!
 ## Reference
+[1] All of the images on the equations are screenshots from the Course video.
+
+[2] The equation 6 is from the [lilianweng blog](https://lilianweng.github.io/posts/2018-02-19-rl-overview/#dynamic-programming)
+
+[3] The Intuition on the Policy Iteration with the car is drawn in Excalidraw.
