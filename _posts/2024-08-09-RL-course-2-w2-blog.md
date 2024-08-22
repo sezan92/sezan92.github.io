@@ -22,3 +22,4 @@ $
 Simple, right?
 
 [first video done , next video.]
+[watched second video, could not understand. check the book.]
