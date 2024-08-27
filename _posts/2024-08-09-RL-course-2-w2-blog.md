@@ -22,4 +22,4 @@ $
 Simple, right?
 
 [first video done , next video.]
-[watched second video, could not understand. check the book.]
+[read the book got some basic idea, need to make my own intuition.]
