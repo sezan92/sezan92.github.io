@@ -21,5 +21,28 @@ $
 
 Simple, right?
 
-[first video done , next video.]
-[read the book got some basic idea, need to make my own intuition.]
+### Real life intuition!
+
+![penalty](/images/RL_2_W2_blog/image_1_pexels_penalty.jpg)
+
+The above photo is taken from pexels[dot]com.
+
+In real life (IRL), how do we learn everything? Just think about it. For example Football (Americans call it Soccer, but it is the Real football!). How do you learn playing the game of football? Do you try to understand physics of football? For example, if you are taking a penalty kick there are two options for you to learn how to take an optimum penalty kick.
+
+    a) You start learning the physics of penalty kick. That means you have to study the aerodynamics of the ball, the environment that day, the state of the Goalkeeper , and maybe then you can calculate the exact force and direction by which you have to hit the ball! 
+    
+    b) OR, you start practicing with the ball every day!
+
+
+I think we all know the answer. WE DO NOT GO FOR (a)! Not only this is close to impossible, even it was possible, it would take ALL THE FUN THERE ARE IN A GAME! Anyway, (a) is Dynamic programming , (b) is Monte carlo learning.
+
+
+Here it is what happening,
+
+When you are taking thousands of shots you are collecting the "sample states" -> $s_t$
+
+Kicking the ball is action -> $a_t$
+
+You may score a goal or not. They can be reward $r_t$.
+
+The most important part, your brain learns to kick the ball in the right force and direction by collecting the samples!!
