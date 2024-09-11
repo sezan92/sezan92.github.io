@@ -34,7 +34,7 @@ In real life (IRL), how do we learn everything? Just think about it. For example
     b) OR, you start practicing with the ball every day!
 
 
-I think we all know the answer. WE DO NOT GO FOR (a)! Not only this is close to impossible, even it was possible, it would take ALL THE FUN THERE ARE IN A GAME! Anyway, (a) is Dynamic programming , (b) is Monte carlo learning.
+I think we all know the answer. WE DO NOT GO FOR (a)! Not only this is close to impossible, even it was possible, it would take ALL THE FUN THERE ARE IN A GAME! Anyway, (a) is Dynamic programming , (b) is Monte carlo learning. Actually , very close to! But you get the big idea right?
 
 
 Here it is what happening,
@@ -46,3 +46,4 @@ Kicking the ball is action -> $a_t$
 You may score a goal or not. They can be reward $r_t$.
 
 The most important part, your brain learns to kick the ball in the right force and direction by collecting the samples!!
+
