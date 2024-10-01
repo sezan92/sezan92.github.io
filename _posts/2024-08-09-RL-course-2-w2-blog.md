@@ -47,3 +47,11 @@ You may score a goal or not. They can be reward $r_t$.
 
 The most important part, your brain learns to kick the ball in the right force and direction by collecting the samples!!
 
+
+## Exploration
+
+For monte-carlo method, as the agent does not have full knowledge of the dynamics of the environment and it is basically sampling based method, it is necessary to give the agent as much as information possible of different states.
+
+### Let's get back to the penalty kick situation
+
+Suppose you are a goalkeeper, You want to train yourself as much as possible. You are never able to know the physics of all football matches. Even if you do, by the time you can calculate the position of
