@@ -54,4 +54,4 @@ For monte-carlo method, as the agent does not have full knowledge of the dynamic
 
 ### Let's get back to the penalty kick situation
 
-Suppose you are a goalkeeper, You want to train yourself as much as possible. You are never able to know the physics of all football matches. Even if you do, by the time you can calculate the position of
+Suppose you are a goalkeeper, You want to train yourself as much as possible. You are never able to know the physics of all football matches. Even if you do, by the time you can calculate the position of the penalty taker, it's already goal! So what should you do? Like I said, practice!!! The more different types of goal stopping practice you can do , the more probability to stop the goals in the real matches!! These different shoots are what? Literally samples!! (TODO, add example of different scenarios of goal stoping including images.)
