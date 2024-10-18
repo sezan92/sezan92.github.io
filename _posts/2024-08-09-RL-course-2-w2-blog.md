@@ -54,4 +54,6 @@ For monte-carlo method, as the agent does not have full knowledge of the dynamic
 
 ### Let's get back to the penalty kick situation
 
-Suppose you are a goalkeeper, You want to train yourself as much as possible. You are never able to know the physics of all football matches. Even if you do, by the time you can calculate the position of the penalty taker, it's already goal! So what should you do? Like I said, practice!!! The more different types of goal stopping practice you can do , the more probability to stop the goals in the real matches!! These different shoots are what? Literally samples!! (TODO, add example of different scenarios of goal stoping including images.)
+Suppose you are a goalkeeper, You want to train yourself as much as possible. You are never able to know the physics of all football matches. Even if you do, by the time you can calculate the position of the penalty taker, it's already goal! So what should you do? Like I said, practice!!! The more different types of goal stopping practice you can do , the more probability to stop the goals in the real matches!! These different scenarios of shooting practices are literally samples ? The more diverse the samples are the better chances of training yourself for the games or in other words "generalizing" the agent! This is exactly what exploration does!
+
+![GK](/images/RL_2_W2_blog/image_2_pexels_GK.jpg)
