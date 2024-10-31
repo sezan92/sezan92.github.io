@@ -61,12 +61,15 @@ Suppose you are a goalkeeper, You want to train yourself as much as possible. Yo
 ## Exploration in the environments!
 
 So! We have got an idea about the need for exploration! How to do it in an RL environment? 
-There are two popular ways to do !
+There are two popular ways to do so!
 
 ### Exploring start policy
 
 In this case the agent will start at a random initial state everytime it starts playing the game.
-This way the agent should start learning to generalize. But there is a problem. There is very little 
-guarantee.. TBC.
+This way the agent should start learning to generalize. For example if you play chess, you are always starting from the same initial state.
+How about we randomize your initialize your state every time?! Sometimes you might be just before an obvious check mate, sometimes you might be check mated!
+Either way you will learn to train yourself in all sorts of initial position! But it has a problem. It does only deals with random initial states!
+It does not directly affect the behaviour of the agent along the policy! For example , back to the chess, if you always follow a certain policy for chess, 
+no matter what initial state , your policy might not be affected.
 
 ### Epsilon-soft policy 
