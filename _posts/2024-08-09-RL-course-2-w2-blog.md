@@ -73,3 +73,8 @@ It does not directly affect the behaviour of the agent along the policy! For exa
 no matter what initial state , your policy might not be affected.
 
 ### Epsilon-soft policy 
+
+In this case the agent will choose random action based on a threshold $\epsilon$ , which is why named $\epsilon$ -soft policy. The biggest advantage is that the agent will learn about the value of a state and action at any state at any time. This policy has more chance of training the agent with all of the available state spaces. 
+
+Going back to our Football (aka Soccer) intuition, it is more like trying different types of shoots at different places of the D-box! Sometimes you try the working action or / shots, sometimes you experiment in the practice!
+
