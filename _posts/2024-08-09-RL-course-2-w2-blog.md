@@ -4,7 +4,9 @@
 
 ## TLDR
 
-- Monte Carlo method
+- Monte Carlo method definition
+- Exploration vs Exploitation
+- Exploring start policy vs Soft epsilon policyß
 
 ## Monte Carlo method
 
@@ -78,3 +80,6 @@ In this case, the agent will choose random action based on a threshold $\epsilon
 
 Going back to our Football (aka Soccer) intuition, it is more like trying different types of shots at different places of the D-box! Sometimes you try the working action or / shots, sometimes you experiment in practice!
 
+## Reference
+
+[1] The images used in this article are downloaded from pexels dot com.ß
