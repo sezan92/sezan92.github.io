@@ -80,6 +80,9 @@ In this case, the agent will choose random action based on a threshold $\epsilon
 
 Going back to our Football (aka Soccer) intuition, it is more like trying different types of shots at different places of the D-box! Sometimes you try the working action or / shots, sometimes you experiment in practice!
 
+The algorithm for epsilon-soft policy is as follows 
+![algorithm](/images/RL_2_W2_blog/image_3_algo_rl.jpeg)
+
 ## Reference
 
 [1] The images used in this article are downloaded from pexels dot com.ß
