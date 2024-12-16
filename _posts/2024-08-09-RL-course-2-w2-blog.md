@@ -83,6 +83,14 @@ Going back to our Football (aka Soccer) intuition, it is more like trying differ
 The algorithm for epsilon-soft policy is as follows 
 ![algorithm](/images/RL_2_W2_blog/image_3_algo_rl.jpeg)
 
+## Off-policy learning 
+
+### What is off-policy learning?
+
+Till now, we were assuming that the agent which will interact with the environment is the same agent we will train everytime it interacts (also known as episode). 
+This is known as `on-policy` learning.
+
+
 ## Reference
 
 [1] The images used in this article are downloaded from pexels dot com.ß
