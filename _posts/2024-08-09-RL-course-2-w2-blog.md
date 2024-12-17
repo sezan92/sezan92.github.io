@@ -88,7 +88,13 @@ The algorithm for epsilon-soft policy is as follows
 ### What is off-policy learning?
 
 Till now, we were assuming that the agent which will interact with the environment is the same agent we will train everytime it interacts (also known as episode). 
-This is known as `on-policy` learning.
+This is known as `on-policy` learning. What if we have two agents? One for learning and one for explore - exploit? It is playing an online First person shooter game
+in a team. You explore some places and let others know your observation. They will use this knowledge (or dare I say training) in the other periods (or episodes) of
+the game!
+
+### Why is it important?
+
+The agent that learns and engages with the enviornment at the same time 
 
 
 ## Reference
