@@ -87,15 +87,15 @@ The algorithm for epsilon-soft policy is as follows
 
 ### What is off-policy learning?
 
-Till now, we were assuming that the agent which will interact with the environment is the same agent we will train everytime it interacts (also known as episode). 
+Till now, we were assuming that the agent which will interact with the environment is the same agent we will train everytime it interacts (also known as episode).
 This is known as `on-policy` learning. What if we have two agents? One for learning and one for explore - exploit? It is playing an online First person shooter game
 in a team. You explore some places and let others know your observation. They will use this knowledge (or dare I say training) in the other periods (or episodes) of
 the game!
 
+
 ### Why is it important?
 
-The agent that learns and engages with the enviornment at the same time 
-
+The problem of exploration exploitation dilemma stems from the fact that same agent has to explore sometimes and it has to exploit sometimes. Using two policies, one which only explore (let's call it behaviour policy $b(a|s)$) and the other policy is the policy which will only be used to exploit (i.e. use the training from the exploration to get the best action; let's call it target policy $\pi(a|s)$).
 
 ## Reference
 
