@@ -92,11 +92,14 @@ This is known as `on-policy` learning. What if we have two agents? One for learn
 in a team. You explore some places and let others know your observation. They will use this knowledge (or dare I say training) in the other periods (or episodes) of
 the game!
 
-
 ### Why is it important?
 
-The problem of exploration exploitation dilemma stems from the fact that same agent has to explore sometimes and it has to exploit sometimes. Using two policies, one which only explore (let's call it behaviour policy $b(a|s)$) and the other policy is the policy which will only be used to exploit (i.e. use the training from the exploration to get the best action; let's call it target policy $\pi(a|s)$).
+The problem of exploration exploitation dilemma stems from the fact that the same agent has to explore sometimes and it has to exploit sometimes. Using two policies, one which only explore (let's call it behaviour policy $b(a|s)$) and the other policy is the policy which will only be used to exploit (i.e. use the training from the exploration to get the best action; let's call it target policy $\pi(a|s)$). This way the agent can learn from the exploration and exploit the knowledge in the future episodes. This way we can use the best of both worlds! The behaviour policy will help our agent to learn all possible actions for every state (atleast most of the states!) and the target policy will help the agent to take the best action!
+The below picture shows two types of policies. Can you guess which one is the behaviour policy and which one is the target policy?
+![off-policy](/images/RL_2_W2_blog/image_4_exploit_exploration.png)
+Source : [2]
+
 
 ## Reference
 
-[1] The images used in this article are downloaded from pexels dot com.ß
+[1] The images used in this article are downloaded from pexels dot com.
