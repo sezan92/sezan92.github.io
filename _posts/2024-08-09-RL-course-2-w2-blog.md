@@ -103,3 +103,5 @@ Source : [2]
 ## Reference
 
 [1] The images used in this article are downloaded from pexels dot com.
+
+[2] Coursera Sample-based learning methods video on off policy.
