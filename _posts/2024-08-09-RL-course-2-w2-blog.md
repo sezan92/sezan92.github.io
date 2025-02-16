@@ -99,6 +99,26 @@ The below picture shows two types of policies. Can you guess which one is the be
 ![off-policy](/images/RL_2_W2_blog/image_4_exploit_exploration.png)
 Source : [2]
 
+*Now here is an issue with off policy*
+See when we are exploring, we are doing using a policy named $\pi_b$ , the policy we want to evaluate and improve is $\pi_t$ . Recall the equation for the expected rewards for a policy?
+
+\begin{equation}
+E(\pi | s) = \sum \pi G
+\end{equation}
+$
+
+The rewards we get for behaviour policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$ . So how can we get the correct expected reward?
+
+### Importance sampling
+
+Here is a statistical trick! let's define a parameter named importance ratio $\rho$ such as
+
+\begin{equation}
+\rho = \frac{\pi_t(s)}{\pi_b(b)}
+\end{equation}
+$
+
+
 
 ## Reference
 
