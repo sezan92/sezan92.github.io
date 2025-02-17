@@ -102,23 +102,63 @@ Source : [2]
 *Now here is an issue with off policy*
 See when we are exploring, we are doing using a policy named $\pi_b$ , the policy we want to evaluate and improve is $\pi_t$ . Recall the equation for the expected rewards for a policy?
 
+$
 \begin{equation}
-E(\pi | s) = \sum \pi G
+E(\pi | s) = \sum \pi G^{T}_{t=0}
 \end{equation}
 $
 
-The rewards we get for behaviour policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$ . So how can we get the correct expected reward?
+The expected rewards we get for behaviour policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$ . That means, 
+s
+
+So how can we get the correct expected reward?
 
 ### Importance sampling
 
 Here is a statistical trick! let's define a parameter named importance ratio $\rho$ such as
 
+$
 \begin{equation}
 \rho = \frac{\pi_t(s)}{\pi_b(b)}
 \end{equation}
 $
 
 
+From equation (2) we can get the following
+
+$
+\begin{equation}
+E(\pi_t | s) = \sum \pi_t G^{T}_{t=0}
+\end{equation}
+$
+
+or,
+
+$
+\begin{equation}
+E(\pi_t | s) = \sum \frac{\pi_b}{\pi_b}\pi_t G^{T}_{t=0}
+\end{equation}
+$
+
+or,
+
+$
+\begin{equation}
+E(\pi_t | s) = \sum {\rho} {\pi_b} G^{T}_{t=0}
+\end{equation}
+$
+
+The above equation tells us this important information! When we know the importance sampling ratio we can easily get the expected reward for the target policy based on that of behaviour policy!!!
+
+*but how can we get the Expected rewards for the behaviour policy?*
+
+Well , we already know that, do not we?
+
+$
+\begin{equation}
+G^{T}_{t=0} = r_0 + \gamma r_1 +  \gamma^2 r_2 + ....\gamma ^ {n} r_n
+\end{equation}
+$
 
 ## Reference
 
