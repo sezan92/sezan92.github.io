@@ -108,18 +108,35 @@ E(\pi | s) = \sum \pi G^{T}_{t=0}
 \end{equation}
 $
 
-The expected rewards we get for behaviour policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$ . That means, 
-s
-
-So how can we get the correct expected reward?
+The expected rewards we get for behaviour policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$ . But how can we get the correct expected reward?
 
 ### Importance sampling
 
-Here is a statistical trick! let's define a parameter named importance ratio $\rho$ such as
+Here is a statistical trick!
+Let's assume there are is a variable $x$ and there are two functions $f(x)$ and $g(x)$ . We want to calculate the expected value of $f(x)= xf(x)$ based on the distribution of $g(x)$ . We can do this by the following equation.
 
 $
 \begin{equation}
-\rho = \frac{\pi_t(s)}{\pi_b(b)}
+E(f) = \sum x f(x)
+\end{equation}
+$
+$
+\begin{equation}
+E(f) = \sum x \frac{f(x)}{g(x)} g(x)
+\end{equation}
+$
+$
+\begin{equation}
+E(f) = \sum \rho x g(x)
+\end{equation}
+$
+
+
+where the parameter named importance ratio $\rho$ such as
+
+$
+\begin{equation}
+\rho = \frac{f(x)}{g(x)}
 \end{equation}
 $
 
