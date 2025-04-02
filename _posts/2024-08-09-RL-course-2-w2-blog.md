@@ -112,25 +112,35 @@ The expected rewards we get for behaviour policy $G_{\pi_b}$ will be by definiti
 
 ### Importance sampling
 
+
+***Let me be honest! I have no idea how to make a real life intuition for this concept!!! All of the videoes I have watched are technical!!! So this is the only way I can explain! If any reader can provide intuition, please do so!***
+
 Here is a statistical trick!
-Let's assume there are is a variable $x$ and there are two functions $f(x)$ and $g(x)$ . We want to calculate the expected value of $f(x)= xf(x)$ based on the distribution of $g(x)$ . We can do this by the following equation.
+Let's assume there is a variable $x$ and there are two functions $f(x)$ and $g(x)$ . We want to calculate the expected value of $f(x)$ which is $E(f(x))= \sum xf(x)$ based on the distribution of $g(x)$ . We can do this by the following equation.
 
 $
 \begin{equation}
-E(f) = \sum x f(x)
+E(f(x)) = \sum_{i=0}^{i=N} x_i f(x_i)
 \end{equation}
 $
 $
 \begin{equation}
-E(f) = \sum x \frac{f(x)}{g(x)} g(x)
+E(f) = \sum_{i=0}^{i=N}  x_i \frac{f(x_i)}{g(x_i)} g(x_i)
 \end{equation}
 $
 $
 \begin{equation}
-E(f) = \sum \rho x g(x)
+E(f) = \sum_{i=0}^{i=N}  \rho_i x_i g(x_i)
 \end{equation}
 $
 
+How will we get the value of $\sum_{i=0}^{i=N}  x_i g(x_i) $ ?  This is THE TRICK! 
+
+$
+\begin{equation}
+\sum_{i=0}^{i=N}  x_i g(x_i) \approx \frac{1}{N} \sum_{i=0}^{i=N}  x_i
+\end{equation}
+$
 
 where the parameter named importance ratio $\rho$ such as
 
@@ -140,30 +150,9 @@ $
 \end{equation}
 $
 
+What the hell are doing!
 
-From equation (2) we can get the following
-
-$
-\begin{equation}
-E(\pi_t | s) = \sum \pi_t G^{T}_{t=0}
-\end{equation}
-$
-
-or,
-
-$
-\begin{equation}
-E(\pi_t | s) = \sum \frac{\pi_b}{\pi_b}\pi_t G^{T}_{t=0}
-\end{equation}
-$
-
-or,
-
-$
-\begin{equation}
-E(\pi_t | s) = \sum {\rho} {\pi_b} G^{T}_{t=0}
-\end{equation}
-$
+In statistics this is called the importance sampling. The theory is as follows, if we have two distributions $f(x)$ and $g(x)$ where we can only get the values of $g(x)$ not the $f(x)$ for whatever reason, then in that case, the expected value of $f(x)$ is approximately the multiplication of the importance sampling ratioo $\rho$ and the average of $x_i$ under the distribution of $f(x) \bigcap g(x)$
 
 The above equation tells us this important information! When we know the importance sampling ratio we can easily get the expected reward for the target policy based on that of behaviour policy!!!
 
