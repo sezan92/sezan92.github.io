@@ -52,7 +52,7 @@ The most important part, your brain learns to kick the ball in the right force a
 
 ## Exploration
 
-For the Monte Carlo method, as the agent does not have full knowledge of the dynamics of the environment and it is basically a sampling-based method, it is necessary to give the agent as much as information possible of different states.
+For the Monte Carlo method, as the agent does not have full knowledge of the dynamics of the environment and it is basically a sampling-based method, it is necessary to give the agent as much information as possible about different states.
 
 ### Let's get back to the penalty kick situation
 
@@ -72,7 +72,7 @@ This way the agent should start learning to generalize. For example, if you play
 How about we randomize your initialize your state every time?! Sometimes you might be just before an obvious checkmate, sometimes you might be check-mated!
 Either way, you will learn to train yourself in all sorts of initial positions! But it has a problem. It only deals with random initial states!
 It does not directly affect the behavior of the agent as per the policy! For example, back to chess, if you always follow a certain policy for chess, 
-no matter what initial state, your policy might not be affected.
+No matter what the initial state is, your policy might not be affected.
 
 ### Epsilon-soft policy 
 
@@ -87,20 +87,20 @@ The algorithm for epsilon-soft policy is as follows
 
 ### What is off-policy learning?
 
-Till now, we were assuming that the agent which will interact with the environment is the same agent we will train everytime it interacts (also known as episode).
-This is known as `on-policy` learning. What if we have two agents? One for learning and one for explore - exploit? It is playing an online First person shooter game
-in a team. You explore some places and let others know your observation. They will use this knowledge (or dare I say training) in the other periods (or episodes) of
+Till now, we were assuming that the agent that will interact with the environment is the same agent we will train every time it interacts (also known as an episode).
+This is known as `on-policy` learning. What if we have two agents? One for learning and one for explore - exploit? It is playing an online First-person shooter game
+in a team. You explore some places and let others know about your observations. They will use this knowledge (or dare I say training) in the other periods (or episodes) of
 the game!
 
 ### Why is it important?
 
-The problem of exploration exploitation dilemma stems from the fact that the same agent has to explore sometimes and it has to exploit sometimes. Using two policies, one which only explore (let's call it behaviour policy $b(a|s)$) and the other policy is the policy which will only be used to exploit (i.e. use the training from the exploration to get the best action; let's call it target policy $\pi(a|s)$). This way the agent can learn from the exploration and exploit the knowledge in the future episodes. This way we can use the best of both worlds! The behaviour policy will help our agent to learn all possible actions for every state (atleast most of the states!) and the target policy will help the agent to take the best action!
-The below picture shows two types of policies. Can you guess which one is the behaviour policy and which one is the target policy?
+The problem of the exploration-exploitation dilemma stems from the fact that the same agent has to explore sometimes and it has to exploit sometimes. Using two policies, one which only explores (let's call it behavior policy $b(a|s)$) and the other policy is the policy which will only be used to exploit (i.e. use the training from the exploration to get the best action; let's call it target policy $\pi(a|s)$). This way the agent can learn from the exploration and exploit the knowledge in future episodes. This way we can use the best of both worlds! The behavior policy will help our agent to learn all possible actions for every state (at least most of the states!) and the target policy will help the agent to take the best action!
+The below picture shows two types of policies. Can you guess which one is the behavior policy and which one is the target policy?
 ![off-policy](/images/RL_2_W2_blog/image_4_exploit_exploration.png)
 Source : [2]
 
 *Now here is an issue with off policy*
-See when we are exploring, we are doing using a policy named $\pi_b$ , the policy we want to evaluate and improve is $\pi_t$ . Recall the equation for the expected rewards for a policy?
+See when we are exploring, we are using a policy named $\pi_b$, the policy we want to evaluate and improve is $\pi_t$. Recall the equation for the expected rewards for a policy.
 
 $
 \begin{equation}
@@ -108,15 +108,15 @@ E(\pi | s) = \sum \pi G^{T}_{t=0}
 \end{equation}
 $
 
-The expected rewards we get for behaviour policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$ . But how can we get the correct expected reward?
+The expected rewards we get for behavior policy $G_{\pi_b}$ will be by definition different than that of target policy $G_{\pi_t}$. But how can we get the correct expected reward?
 
 ### Importance sampling
 
 
-***Let me be honest! I have no idea how to make a real life intuition for this concept!!! All of the videoes I have watched are technical!!! So this is the only way I can explain! If any reader can provide intuition, please do so!***
+***Let me be honest! I have no idea how to make a real-life intuition for this concept!!! All of the videos I have watched are technical!!! So this is the only way I can explain! If any reader can provide intuition, please do so!***
 
 Here is a statistical trick!
-Let's assume there is a variable $x$ and there are two functions $f(x)$ and $g(x)$ . We want to calculate the expected value of $f(x)$ which is $E(f(x))= \sum xf(x)$ based on the distribution of $g(x)$ . We can do this by the following equation.
+Let's assume there is a variable $x$ and there are two functions $f(x)$ and $g(x)$. We want to calculate the expected value of $f(x)$ which is $E(f(x))= \sum xf(x)$ based on the distribution of $g(x)$. We can do this by the following equation.
 
 $
 \begin{equation}
@@ -150,7 +150,7 @@ $
 \end{equation}
 $
 
-or we can say 
+Or we can say 
 
 $
 \begin{equation}
@@ -160,15 +160,15 @@ $
 
 What are we doing?!
 
-In statistics this is called the importance sampling. The theory is as follows, if we have two distributions $f(x)$ and $g(x)$ where we can only get the values of $g(x)$ not the $f(x)$ for whatever reason or if it is very hard to sample from $f(x)$, then in that case, the expected value of $f(x)$ is approximately the multiplication of the importance sampling ratioo $\rho$ and the average of $x_i$ under the distribution of $f(x) \bigcap g(x)$. Now this area of $f(x)$ and $g(x)$ is the area where we can sample from both distributions. That is why it is important to have a good sampling of the area. For more details please refere to the video [3].
+In statistics, this is called the importance sampling. The theory is as follows if we have two distributions $f(x)$ and $g(x)$ where we can only get the values of $g(x)$ not the $f(x)$ for whatever reason or if it is very hard to sample from $f(x)$, then in that case, the expected value of $f(x)$ is approximately the multiplication of the importance sampling ratio $\rho$ and the average of $x_i$ under the distribution of $f(x) \bigcap g(x)$. Now this area of $f(x)$ and $g(x)$ is the area where we can sample from both distributions. That is why it is important to have a good sampling of the area. For more details please refer to the video [3].
 
-The above equation tells us this important information! When we know the importance sampling ratio we can easily get the expected reward for the target policy based on that of behaviour policy!!!
+The above equation tells us this important information! When we know the importance sampling ratio we can easily get the expected reward for the target policy based on that of behavior policy!!!
 
-*but how can we get the Expected rewards for the behaviour policy?*
+*but how can we get the Expected rewards for the behavior policy?*
 
-Well , we already know that, do not we?
+Well, we already know that don't we?
 
-In our case the equation will be like this
+In our case, the equation will be like this.
 $
 \begin{equation}
 E(\pi_t(s)) \approx \sum \rho s \pi_b (s)
