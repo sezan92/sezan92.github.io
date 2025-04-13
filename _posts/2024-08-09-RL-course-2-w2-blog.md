@@ -1,4 +1,4 @@
-# Reinforcement Learning Course 2 Week 4
+# Reinforcement Learning Course 2 Week 1
 
 > Notes for Reinforcement Learning Course 2 Week 2.
 
