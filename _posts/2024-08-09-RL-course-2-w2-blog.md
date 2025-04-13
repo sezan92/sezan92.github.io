@@ -130,7 +130,7 @@ E(f) = \sum_{i=0}^{i=N}  x_i \frac{f(x_i)}{g(x_i)} g(x_i)
 $
 $
 \begin{equation}
-E(f) = \sum_{i=0}^{i=N}  \rho_i x_i g(x_i)
+E(f) = \sum_{i=0}^{i=N}  \rho_(x_i) x_i g(x_i)
 \end{equation}
 $
 
@@ -146,13 +146,21 @@ where the parameter named importance ratio $\rho$ such as
 
 $
 \begin{equation}
-\rho = \frac{f(x)}{g(x)}
+\rho (x_i) = \frac{f(x_i)}{g(x_i)}
 \end{equation}
 $
 
-What the hell are doing!
+or we can say 
 
-In statistics this is called the importance sampling. The theory is as follows, if we have two distributions $f(x)$ and $g(x)$ where we can only get the values of $g(x)$ not the $f(x)$ for whatever reason, then in that case, the expected value of $f(x)$ is approximately the multiplication of the importance sampling ratioo $\rho$ and the average of $x_i$ under the distribution of $f(x) \bigcap g(x)$
+$
+\begin{equation}
+E(f) \approx \frac{1}{N} \sum_{i=0}^{i=N} x_i \rho_(x_i) 
+\end{equation}
+$
+
+What are we doing?!
+
+In statistics this is called the importance sampling. The theory is as follows, if we have two distributions $f(x)$ and $g(x)$ where we can only get the values of $g(x)$ not the $f(x)$ for whatever reason or if it is very hard to sample from $f(x)$, then in that case, the expected value of $f(x)$ is approximately the multiplication of the importance sampling ratioo $\rho$ and the average of $x_i$ under the distribution of $f(x) \bigcap g(x)$. Now this area of $f(x)$ and $g(x)$ is the area where we can sample from both distributions. That is why it is important to have a good sampling of the area. For more details please refere to the video [3].
 
 The above equation tells us this important information! When we know the importance sampling ratio we can easily get the expected reward for the target policy based on that of behaviour policy!!!
 
@@ -160,9 +168,10 @@ The above equation tells us this important information! When we know the importa
 
 Well , we already know that, do not we?
 
+In our case the equation will be like this
 $
 \begin{equation}
-G^{T}_{t=0} = r_0 + \gamma r_1 +  \gamma^2 r_2 + ....\gamma ^ {n} r_n
+E(\pi_t(s)) \approx \sum \rho s \pi_b (s)
 \end{equation}
 $
 
@@ -171,3 +180,5 @@ $
 [1] The images used in this article are downloaded from pexels dot com.
 
 [2] Coursera Sample-based learning methods video on off policy.
+
+[3] Importance sampling video by Mathematicalmonk [link](https://www.youtube.com/watch?v=S3LAOZxGcnk)
