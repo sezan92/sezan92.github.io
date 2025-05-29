@@ -31,7 +31,8 @@ $
 
 That means we need to take samples of the full trajectory to measure the value $G_t$ and then update the value function.
 
-Something like in Football. If you are learning in the game, you need to think about the whole trajectory of decisions before scoring a goal. That is time-consuming when you are learning! Think about it. If you have to coach a player, do you let him play the whole game of 90 minutes and then tell him what he did wrong? Or will you tell him what he did wrong in the exact moment? At that very "state" of the game?
+Let me give an example from Football game again! Suppose I am trying to train a forward to score a goal no matter from where , no matter in which time As long as he has the ball in the D-box, he must shoot and he must score!! 
+# build up the imagination and tie it to the midfielder passing to the forward.
 
 So how does TD learning work in Football?
 TODO: think about it and write down the intuition.
