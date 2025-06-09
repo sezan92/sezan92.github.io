@@ -40,4 +40,8 @@ The first scenario can be said as Dynamic programming. You wait until each full 
 # build up the imagination and tie it to the midfielder passing to the forward.
 # monte-carlo? how to differentiate with monte-carlo? 
 
-TODO: think about difference with monte-carlo
+TODO: think about difference with monte-carlo: done
+
+Update i have got intution idea from Gemini
+TODO: update the intuitive idea from Gemini. 
+TODO: unsure share the prompt?
