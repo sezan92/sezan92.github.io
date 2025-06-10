@@ -57,6 +57,8 @@ This immediate feedback and ability to learn from incomplete episodes makes TD l
 
 The first scenario can be said as Dynamic programming. You wait until each full game (or Episode). The other can be said TD-error learning!
 
+### TODO: rewrite the above section so it looks more like my own words also add that i took  help from Gemini to build the intuition with the prompt.
+
 #### build up the imagination and tie it to the midfielder passing to the forward
 
 #### monte-carlo? how to differentiate with monte-carlo
