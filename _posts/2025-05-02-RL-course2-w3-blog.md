@@ -6,32 +6,28 @@
 
 - TD Learning!
 
-# write down draft from the video.
 
+## What is TD Learning?
 
-## TD Learning method.
+TD learning method can be said a combination of Monte Carlo and Dynamic Programming. Let's look at the update equation for TD learning:
+$$\begin{equation}
+V(s_t) \leftarrow V(s_t) + \alpha [R_{t+1} + \gamma V(s_{t+1}) - V(s_t)]
+\end{equation}$$
 
-- TD learning is a combination of Monte Carlo and Dynamic Programming.
-- It uses the current estimate of the value function to update the value function.
-- It is a model-free method.
-- It is an off-policy method.
-- It is a bootstrapping method.
-- It is a temporal-difference method.
-- It is a prediction method.
-- It is a control method.
+That means the value of a state is determined by the immediate reward received and the estimated value of the next state.
 
-### Write Intuition from a real life scenario for TD learning method
-
-For monte-carlo policy evaluation, the value function update equation is 
-$
-\begin{equation}
+In the case of monte-carlo policy evaluation, the value function update equation is
+$$\begin{equation}
 V(s_t) \leftarrow V(s_t) + \alpha [G_t - V(s_t)]
-\end{equation}
-$
-
+\end{equation}$$
 That means we need to take samples of the full trajectory to measure the value $G_t$ and then update the value function.
 
-Let's use a Football (Soccer) game to build intuition.
+
+### Intuition for TD learning method vs Monte Carlo
+
+Let's build an intuition from the most beautiful game in the world: football (or soccer, if you are in the USA).
+
+Suppose you are a coach training a midfielder. The midfielder's goal in this case is to pass the ball to the striker in the best position. As we know there are multiple forwards on the field. TODO: continue writeup in you own words.
 
 #### Scenario: A Midfielder Learning to Make Effective Passes
 
