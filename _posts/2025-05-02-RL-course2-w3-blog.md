@@ -27,7 +27,11 @@ That means we need to take samples of the full trajectory to measure the value $
 
 Let's build an intuition from the most beautiful game in the world: football (or soccer, if you are in the USA).
 
-Suppose you are a coach training a midfielder. The midfielder's goal in this case is to pass the ball to the striker in the best position. As we know there are multiple forwards on the field. TODO: continue writeup in you own words.
+Suppose you are a coach training a midfielder. The midfielder's goal in this case is to pass the ball to the striker in the best position. As we know there are multiple forwards on the field. How do we train the player the best place to pass to? How do we train him which player to pass to ? There are two choices
+
+(a): Let the players play till an episode (i.e. either they score a goal , or the play is out of the field). Then based on the last state of the play, the midfielder will determine the best outcome! If the forward scored a goal after the player passed, then the player learns the pass -or action $a_t$ at that state $s_t$ is the best on. In other words updates his policy $\pi(a_t | s_t)$ . This can be similar to dynamic programming.
+(b) If the player learns the same thing but from samples of the episode then we can call it Monte carlo .
+(c)
 
 #### Scenario: A Midfielder Learning to Make Effective Passes
 
