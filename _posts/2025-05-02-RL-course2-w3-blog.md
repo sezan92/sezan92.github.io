@@ -30,18 +30,6 @@ Let's build an intuition from the most beautiful game in the world: football (or
 Suppose you are a coach training a midfielder. The midfielder's goal in this case is to pass the ball to the striker in the best position. As we know there are multiple forwards on the field. How do we train the player the best place to pass to? How do we train him which player to pass to ? There are two choices
 
 (a): Let the players play till an episode (i.e. either they score a goal , or the play is out of the field). There is a video of that full game. The midfielder watches the video of the full game and tries to learn the best passes in each situation. This is dynamic programming! The learning is offline (outside of the game), full sweep on the episode, the player knows the dynamics of the environment, and the player can learn from the full episode.
-(b): What if the midfielder does not need to watch the full game? He updates his knowledge after each pass. For example, if the midfielder passes the ball to a forward and the forward and the forward scores. Then the midfielder can immediately learn that the pass was good. This is Monte Carlo learning! The learning is online (during the game), the player does not know the dynamics of the environment, and the player can learn from partial episodes. The player also can take advantage of videos of several games or episode and "average" the results to learn the best passes. This is what we call Monte Carlo learning.
+(b): What if the midfielder does not need to watch the full game? He updates his knowledge after each pass. For example, if the midfielder passes the ball to a forward and  the forward scores, the midfielder can immediately learn that the pass was good. This is Monte Carlo learning! The learning is online (during the game), the player does not know the dynamics of the environment, and the player can learn from partial episodes. The player also can take advantage of videos of several games or episode and "average" the results to learn the best passes. This is also a type of Monte Carlo learning.
 
-(c) If the midfielder passes the ball to a forward and the forward is very close to the goal post , whether he scores or not, the midfielder can immediately learn what was the best move in that position. This is temporal difference learning! The learning is online (during the game), the player does not know the dynamics of the environment, and the player can learn from partial episodes.
-
-### TODO: rewrite the above section so it looks more like my own words also add that i took  help from Gemini to build the intuition with the prompt.
-
-#### build up the imagination and tie it to the midfielder passing to the forward
-
-#### monte-carlo? how to differentiate with monte-carlo
-
-TODO: think about difference with monte-carlo: done
-
-Update i have got intution idea from Gemini
-TODO: update the intuitive idea from Gemini. 
-TODO: unsure share the prompt?
+(c) If the midfielder passes the ball to a forward and the forward is very close to the goal post , whether he scores or not, the midfielder can immediately learn what was the best move in that position. This is temporal difference learning! The learning is online (during the game), the player does not know the dynamics of the environment, and the player can learn from partial episodes. The difference with the monte carlo method is that in this case, *the forward DOES NOT need to score*. The midfielder can learn from the immediate reward of the pass and the estimated value of the next state (i.e. the position of the forward)! In the case of the Monte Carlo method, the midfielder needs to wait until the forward scores or the play is out of the field to learn from the pass. In this case, the midfielder can learn from every pass he makes, even if the forward does not score.
