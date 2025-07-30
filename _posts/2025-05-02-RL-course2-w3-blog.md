@@ -16,12 +16,6 @@ V(s_t) \leftarrow V(s_t) + \alpha [R_{t+1} + \gamma V(s_{t+1}) - V(s_t)]
 
 That means the value of a state is determined by the immediate reward received and the estimated value of the next state.
 
-In the case of monte-carlo policy evaluation, the value function update equation is
-$$\begin{equation}
-V(s_t) \leftarrow V(s_t) + \alpha [G_t - V(s_t)]
-\end{equation}$$
-That means we need to take samples of the full trajectory to measure the value $G_t$ and then update the value function.
-
 
 ### Intuition for TD learning method vs Monte Carlo
 
@@ -38,3 +32,13 @@ Suppose you are a coach training a midfielder. The midfielder's goal in this cas
 ## what is the difference between TD learning and Monte Carlo?
 
 From the above example we might think that what is the actual difference between TD learning and Monte Carlo? If you read carefully, in the monte-carlo method, the player needs to wait until the forward scores or the play is out of the field to learn from the pass. In the case of TD learning, the midfielder can learn from every pass he makes, even if the forward does not score.
+
+### Difference in equations of the RL methods we have learned so far
+
+(Note that I have used GitHub Copilot to generate the table below and repurposed it)
+
+| Method                  | Update Equation                                                                 | Key Difference                                                                                     |
+|-------------------------|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| Dynamic Programming     | $$V(s_t) \leftarrow \max_a \sum_{s'} P(s'\|s_t, a) [R(s_t, a, s') + \gamma V(s')]$$  | Requires a model of the environment (transition probabilities $P$), updates value function using full knowledge of dynamics. |
+| Monte Carlo             | $$V(s_t) \leftarrow V(s_t) + \alpha [G_t - V(s_t)]$$                            | Requires full trajectory to compute $G_t$, updates value function after the episode ends.         |
+| Temporal Difference (TD)| $$V(s_t) \leftarrow V(s_t) + \alpha [R_{t+1} + \gamma V(s_{t+1}) - V(s_t)]$$    | Updates value function after each step using immediate reward $R_{t+1}$ and estimated next state. |
