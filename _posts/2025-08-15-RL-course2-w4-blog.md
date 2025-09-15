@@ -23,3 +23,8 @@ Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [R_{t+1} + \gamma Q(s_{t+1}, a_{t+1}
 \end{equation}$$
 
 This is the SARSA algorithm. The name SARSA comes from the fact that we are using the set of State, Action, Reward, State, Action to update the action-value function.
+
+This SARSA algorithm is the Generalized Policy Improvement for TD algorithm. Just like we had discussed in [Course 1 Week 4 blog](https://sezan92.github.io/2024/07/03/RL-course1-w4-blog.html).
+
+## TODO
+write after SARSA or add intuition like that of COurse 1 week 4
