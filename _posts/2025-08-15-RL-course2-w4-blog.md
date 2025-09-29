@@ -19,7 +19,7 @@ This equation updates the state-value function only. The value of a state is det
 Now what if we want to update the action-value function instead of the state-value function? We can do that by updating the state-value function into an action value function, that is by replacing $V(s)$ with $Q(s,a)$. The $Q$ is the value of a certain action $a$ taken at a certain state $s$. The update equation becomes:
 
 $$\begin{equation}
-Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [R_{t+1} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t)]
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha [R_{t} + \gamma Q(s_{t+1}, a_{t+1}) - Q(s_t, a_t)]
 \end{equation}$$
 
 This is the SARSA algorithm. The name SARSA comes from the fact that we are using the set of State, Action, Reward, State, Action to update the action-value function.
@@ -27,4 +27,8 @@ This is the SARSA algorithm. The name SARSA comes from the fact that we are usin
 This SARSA algorithm is the Generalized Policy Improvement for TD algorithm. Just like we had discussed in [Course 1 Week 4 blog](https://sezan92.github.io/2024/07/03/RL-course1-w4-blog.html).
 
 ## TODO
-write after SARSA or add intuition like that of COurse 1 week 4
+SARSA intuition
+
+Let's start with my favourite game Football.  Suppose we are learning by playing! As we should all do in any game! Anyway, At the beginning you do not have any idea what to do when?! You just get the ball and try to go forward to the goalpost! Easy right?! Nah! There will be 4 or 5 defenders! And you loose the ball!!
+
+So action $a$ , go forward to the goal post, state $s_{t}$ you have the ball in the middle of the field, resulting state $s_{t+1}$ the other team players took the ball! Reward? you have not scored a goal so it is zero! The value of the state action $Q(s_t, a_t)$ can be updated using the Control equation
