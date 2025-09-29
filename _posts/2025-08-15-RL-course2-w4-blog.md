@@ -32,3 +32,4 @@ SARSA intuition
 Let's start with my favourite game Football.  Suppose we are learning by playing! As we should all do in any game! Anyway, At the beginning you do not have any idea what to do when?! You just get the ball and try to go forward to the goalpost! Easy right?! Nah! There will be 4 or 5 defenders! And you loose the ball!!
 
 So action $a$ , go forward to the goal post, state $s_{t}$ you have the ball in the middle of the field, resulting state $s_{t+1}$ the other team players took the ball! Reward? you have not scored a goal so it is zero! The value of the state action $Q(s_t, a_t)$ can be updated using the Control equation
+## TODO refine it.
