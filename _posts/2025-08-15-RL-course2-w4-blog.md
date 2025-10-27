@@ -27,4 +27,11 @@ This is the SARSA algorithm. The name SARSA comes from the fact that we are usin
 This SARSA algorithm is the Generalized Policy Improvement for TD algorithm. Just like we had discussed in [Course 1 Week 4 blog](https://sezan92.github.io/2024/07/03/RL-course1-w4-blog.html).
 
 
-But here is an issue! What if the action taken at the next step $s_{t+1}$ does not give us the best value $Q(s_{t+1})$? Or in other words the policy is not the most optimum?
+But here is an issue! What if the action taken at the next step $s_{t+1}$ does not give us the best value $Q(s_{t+1})$? Or in other words the policy is not the most optimum? For example, your policy is to give long passes always. But in the front of the goal post, will you follow your policy and shoot for long pass to another team mate? Or will you go for the goal? You should choose the action with the maximum reward right? 
+
+
+## Q learning!
+
+### TODO 
+write Q learning intuition
+add a picture to show problem with SARSA.
