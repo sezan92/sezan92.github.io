@@ -35,3 +35,4 @@ But here is an issue! What if the action taken at the next step $s_{t+1}$ does n
 ### TODO 
 write Q learning intuition
 add a picture to show problem with SARSA.
+watched  https://www.coursera.org/learn/sample-based-learning-methods/lecture/m6AWq/what-is-q-learning
