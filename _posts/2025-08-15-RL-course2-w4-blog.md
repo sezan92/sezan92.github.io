@@ -34,7 +34,22 @@ But here is an issue! What if the action taken at the next step $s_{t+1}$ does n
 
 ### Intuition
 
-Suppose in the game of the football, you have multiple choices to make. You can either go for long pass, or go for short pass or go for shoot to the Goal post! Which action to take? What about , each time you take the action based on the maximum value? How can we know the value? (That is the point of Q learning!) But suppose you know what is the value of state action pair!
+Suppose in the game of the football, you have multiple choices to make. You can either go for long pass, or go for short pass or go for shoot to the Goal post! Which action to take? What about , each time you take the action based on the maximum value? How can we know the value? (That is the point of Q learning!) For now, lets assume we know what is the value of state action pair in the game.
+
+If you are at the front of a D-box, what will you do? Shoot or Pass? 
+
+Lets assume you have the following option
+
+
+$Q(s_t=Dbox, a=shoot) = 0.1 $
+$Q(s_t=Dbox, a=pass) = 0.5 $
+
+and the player who is in front of the Goal post
+
+$Q(s_t=goal_post, a=shoot) = 0.9$
+$Q(s_t=goal_post, a=pass) = 0.6$ 
+
+
 ### TODO : continue
 
 
