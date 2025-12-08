@@ -49,8 +49,18 @@ and the player who is in front of the Goal post
 $Q(s_t=goal_post, a=shoot) = 0.9$
 $Q(s_t=goal_post, a=pass) = 0.6$ 
 
+The best set of actions (or policy) is to take the action with the maximum value at each state. So at D-box you will "pass", and expect the player in front of the goalpost to "shoot". How can you know that the player will "shoot" when you "pass" ? You cannot be sure about it! But you can "expect" him to "shoot" based on your experience. So you should train yourself to "pass" in that position "expecting" the player will "shoot". Not that he will "pass" again! This is the intuition behind Q learning.
 
-### TODO : continue
+### Q learning update equation
+The Q learning update equation is as follows:
+
+
+$$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{\max_{a'} Q(s', a')}_{\text{Best possible action}} - Q(s, a)]$$
+
+That is we are updating the action-value function of the current state-action pair expecting that the next action taken will be the one with the maximum value. This differs from SARSA where we take the next action based on the current policy. 
+
+$$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q(s', a')}_{\text{Actual next action}} - Q(s, a)]$$
+
 
 
 ### TODO 
