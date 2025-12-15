@@ -61,7 +61,7 @@ That is we are updating the action-value function of the current state-action pa
 
 $$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q(s', a')}_{\text{Actual next action}} - Q(s, a)]$$
 
-
+![Intuition](/images/RL_2_W4_blog/shot_pass_diagram_gemini.png)
 
 ### TODO 
 write Q learning intuition
