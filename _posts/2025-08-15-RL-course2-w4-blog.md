@@ -63,7 +63,9 @@ $$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q(s', a')}_{\text{
 
 ![Intuition](/images/RL_2_W4_blog/shot_pass_diagram_gemini.png)
 
+### How is Q-learning off-policy?
+
 ### TODO 
-write Q learning intuition
-add a picture to show problem with SARSA.
-watched  https://www.coursera.org/learn/sample-based-learning-methods/lecture/m6AWq/what-is-q-learning
+Confirm why Q-learning is off-policy and why it does not need importance sampling.
+https://www.coursera.org/learn/sample-based-learning-methods/lecture/1OikH/how-is-q-learning-off-policy
+start from 2:21
