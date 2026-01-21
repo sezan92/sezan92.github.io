@@ -65,7 +65,9 @@ $$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q(s', a')}_{\text{
 
 ### How is Q-learning off-policy?
 
+Summary, because it chooses action based on behaviour policy,
+
 ### TODO 
 Confirm why Q-learning is off-policy and why it does not need importance sampling.
 https://www.coursera.org/learn/sample-based-learning-methods/lecture/1OikH/how-is-q-learning-off-policy
-start from 2:21
+start from 3:06
