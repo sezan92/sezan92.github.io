@@ -65,9 +65,16 @@ $$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q(s', a')}_{\text{
 
 ### How is Q-learning off-policy?
 
-Summary, because it chooses action based on behaviour policy,
+If we can recall the off-policy learning and the on-policy learning from the previous blogs, the on-policy learning updateds the value of the action taken based on the current policy. On the other hand, off-policy learning updates the value of the action taken based on a different policy. In Q-learning, the action taken is based on the behaviour policy. But the update is based on the maximum value action which is different from the behaviour policy. Hence Q-learning is off-policy.
 
-### TODO 
-Confirm why Q-learning is off-policy and why it does not need importance sampling.
-https://www.coursera.org/learn/sample-based-learning-methods/lecture/1OikH/how-is-q-learning-off-policy
-start from 3:06
+
+
+### Why does not Q-learning need importance sampling?
+
+Remember Importance sampling from /home/sezan/Desktop/work/sezan92.github.io/_posts/2024-08-09-RL-course-2-w2-blog.md ? 
+
+In the monte-carlo off-policy learning we needed importance sampling because the action was taken based on the behaviour policy while the update was done to the target policy. Hence, we had to adjust the expected reward based on the statistical trick of importance sampling. However, in this case we are updating the value based on the maximum valu action which is independant of the behaviour policy. So we do not need to adjust the expected reward based on the behaviour policy. That is why Q-learning does not need importance sampling.
+
+### TODO
+
+start video on Expected SARSA
