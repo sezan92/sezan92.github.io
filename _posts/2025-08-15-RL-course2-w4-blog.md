@@ -71,10 +71,25 @@ If we can recall the off-policy learning and the on-policy learning from the pre
 
 ### Why does not Q-learning need importance sampling?
 
-Remember Importance sampling from /home/sezan/Desktop/work/sezan92.github.io/_posts/2024-08-09-RL-course-2-w2-blog.md ? 
+Remember Importance sampling from [Course 2 Week 2 blog](https://sezan92.github.io/2024/08/09/RL-course-2-w2-blog.html)?
 
 In the monte-carlo off-policy learning we needed importance sampling because the action was taken based on the behaviour policy while the update was done to the target policy. Hence, we had to adjust the expected reward based on the statistical trick of importance sampling. However, in this case we are updating the value based on the maximum valu action which is independant of the behaviour policy. So we do not need to adjust the expected reward based on the behaviour policy. That is why Q-learning does not need importance sampling.
 
-### TODO
 
-start video on Expected SARSA
+## Expected SARSA
+
+Recall the SARSA algorithm?
+The equation is
+
+$$\begin{equation}
+Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma Q(s', a') - Q(s, a)]
+\end{equation}$$
+
+As we know the policy already, why not we calculate the expected value using the policy for the next step? WHich is to average the rewards for each action based on the probability of that action. The equation is
+
+$$$$
+
+
+### TODO
+- complete the Expexted SARSA 
+- watch the next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/7xbMM/expected-sarsa-in-the-cliff-world
