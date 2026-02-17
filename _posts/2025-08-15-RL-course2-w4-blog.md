@@ -87,7 +87,11 @@ Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma Q(s', a') - Q(s, a)]
 
 As we know the policy already, why not we calculate the expected value using the policy for the next step? WHich is to average the rewards for each action based on the probability of that action. The equation is
 
-$$$$
+$$
+Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{\sum_{a'} \pi(a'|s')Q(s', a')}_{\text{Expected next action}} - Q(s, a)]
+$$
+
+
 
 
 ### TODO
