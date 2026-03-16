@@ -96,10 +96,13 @@ $$
 
 The difference between SARSA and Expected SARSA is that the update equation in the SARSA is not considering the probability distribution of the policy. While the Expected SARSA is considering the probability distribution of the policy. This makes the updated action values in Expected SARSA more accurate.
 
-Let's think about an intuition from Soccer. Suppose you are the midfielder whose job is to pass the ball to the striker. You have two choices, 
+Let's think about an intuition from Soccer. Suppose you are the midfielder whose job is to pass the ball to the striker. But you are not entirely in control of your pass are you? Think about it. You will take the action of passing to the striker. OR the defender from the other side may intercept your ball as well?!!! If we think about the Q learning equation , where we anticipate the value of the current state and the action (in this case `position_in_front_of_goal_post` and `pass`) then we are in the best position. But there is a chance (or probability!) of the defender taking the ball from the striker! Then the best value of the state and action would be to consider that possibility as well!!!!
+
+### Flow chart
 
 
 
 ### TODO
 - complete the Expexted SARSA intuition.
+- - Add a flowchart explaining the diffrence between Q learning and Expected sarsa
 - watch the next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/7xbMM/expected-sarsa-in-the-cliff-world
