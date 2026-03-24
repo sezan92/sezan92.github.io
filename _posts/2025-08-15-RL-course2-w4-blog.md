@@ -104,6 +104,6 @@ Let's think about an intuition from Soccer. Suppose you are the midfielder whose
 
 
 ### TODO
-- complete the Expexted SARSA intuition.
-- - Add a flowchart explaining the diffrence between Q learning and Expected sarsa
+- update the image https://gemini.google.com/share/90e64863c42c
+
 - watch the next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/7xbMM/expected-sarsa-in-the-cliff-world
