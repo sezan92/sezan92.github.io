@@ -102,8 +102,9 @@ Let's think about an intuition from Soccer. Suppose you are the midfielder whose
 ### Flow chart
 
 
+### Generality of Expected SARSA
 
 ### TODO
 - update the image https://gemini.google.com/share/90e64863c42c
 
-- watch the next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/7xbMM/expected-sarsa-in-the-cliff-world
+- watch next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/k908o/generality-of-expected-sarsa
