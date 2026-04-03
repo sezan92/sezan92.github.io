@@ -111,4 +111,4 @@ The above image is generated using Gemini.
 ### TODO
 
 
-- watch next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/k908o/generality-of-expected-sarsa
+- explain https://www.coursera.org/learn/sample-based-learning-methods/lecture/k908o/generality-of-expected-sarsa
