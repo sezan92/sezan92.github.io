@@ -96,7 +96,11 @@ $$
 
 The difference between SARSA and Expected SARSA is that the update equation in the SARSA is not considering the probability distribution of the policy. While the Expected SARSA is considering the probability distribution of the policy. This makes the updated action values in Expected SARSA more accurate.
 
-Let's think about an intuition from Soccer. Suppose you are the midfielder whose job is to pass the ball to the striker. But in real life you are not entirely in control of your pass; are you? Think about it! You will pass to the striker (in other words, take the $a_{pass}$) to the forward. But there are possibilities that may happen! The striker may get the ball ,OR the defender from the other side may intercept your ball as well?!!! In the case of Q-learning we are updating the value of the current state anticipating the only one deterministic outcome of the current action and the best plausible action from the next state. But there are chances or (probabilities) of other outcomes from the same action, and hence other plausible next states (or $s'\epsilon S'$). Then the most accurate value of the current state-action pair should come out of all plausible outcomes from the current action and next states. This is the intuition behind Expected SARSA.
+Let's think about an intuition from Soccer.
+![sarsa_intution](/images/RL_2_W4_blog/image_2_sarsa_pass_diagram_gemini.jpg)
+The above image is generated using Gemini.
+
+ Suppose you are the midfielder whose job is to pass the ball to the striker. But in real life you are not entirely in control of your pass; are you? Think about it! You will pass to the striker (in other words, take the $a_{pass}$) to the forward. But there are possibilities that may happen! The striker may get the ball ,OR the defender from the other side may intercept your ball as well?!!! In the case of Q-learning we are updating the value of the current state anticipating the only one deterministic outcome of the current action and the best plausible action from the next state. But there are chances or (probabilities) of other outcomes from the same action, and hence other plausible next states (or $s'\epsilon S'$). Then the most accurate value of the current state-action pair should come out of all plausible outcomes from the current action and next states. This is the intuition behind Expected SARSA.
 
 
 ### Flow chart
@@ -105,6 +109,6 @@ Let's think about an intuition from Soccer. Suppose you are the midfielder whose
 ### Generality of Expected SARSA
 
 ### TODO
-- update the image https://gemini.google.com/share/90e64863c42c
+
 
 - watch next video https://www.coursera.org/learn/sample-based-learning-methods/lecture/k908o/generality-of-expected-sarsa
