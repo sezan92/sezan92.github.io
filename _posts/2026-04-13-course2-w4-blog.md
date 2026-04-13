@@ -2,7 +2,9 @@
 
 ## TLDR
 
-- GPI for TD: SARSA
+- Temporal Difference Learning for Control.
+- SARSA, Q-learning and Expected SARSA.
+- How Q-learning is actually a special case of Expected SARSA.
 
 
 ## SARSA: What is it?
