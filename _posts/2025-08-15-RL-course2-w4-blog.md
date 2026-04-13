@@ -61,7 +61,7 @@ That is we are updating the action-value function of the current state-action pa
 
 $$Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q(s', a')}_{\text{Actual next action}} - Q(s, a)]$$
 
-![Intuition](/images/RL_2_W4_blog/iamge_1_shot_pass_gemini.png)
+![Intuition](/images/RL_2_W4_blog/image_1_shot_pass_gemini.png)
 
 ### How is Q-learning off-policy?
 
@@ -103,12 +103,19 @@ The above image is generated using Gemini.
  Suppose you are the midfielder whose job is to pass the ball to the striker. But in real life you are not entirely in control of your pass; are you? Think about it! You will pass to the striker (in other words, take the $a_{pass}$) to the forward. But there are possibilities that may happen! The striker may get the ball ,OR the defender from the other side may intercept your ball as well?!!! In the case of Q-learning we are updating the value of the current state anticipating the only one deterministic outcome of the current action and the best plausible action from the next state. But there are chances or (probabilities) of other outcomes from the same action, and hence other plausible next states (or $s'\epsilon S'$). Then the most accurate value of the current state-action pair should come out of all plausible outcomes from the current action and next states. This is the intuition behind Expected SARSA.
 
 
-### Flow chart
-
-
 ### Generality of Expected SARSA
 
-### TODO
+Let's look at the update equation of Expected SARSA again:
 
+$$
+Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{\sum_{a'} \pi(a'|s')Q(s', a')}_{\text{Expected next action}} - Q(s, a)]
+$$
 
-- explain https://www.coursera.org/learn/sample-based-learning-methods/lecture/k908o/generality-of-expected-sarsa
+The target policy is different from the behaviour policy. The target policy is the one we are using to calculate the expected value of the next action, while the behaviour policy is the one we are using to take the action. Hence, Expected SARSA is an off-policy learning algorithm.
+
+What if we have a greedy policy? In that case, the probability of the action with the maximum value taken will be 1 and the probability of all other actions will be 0. Hence, the update equation will become:
+$$
+Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q_{\max}(s', a')}_{\text{Best possible action}} - Q(s, a)]
+$$
+
+This is the exact same update equation for Q-learning! Hence, we can say that the Q-learning is a special case of Expected SARSA where the policy is greedy!
