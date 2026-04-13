@@ -121,3 +121,13 @@ Q(s, a) \leftarrow Q(s, a) + \alpha [R + \gamma \underbrace{Q_{\max}(s', a')}_{\
 $$
 
 This is the exact same update equation for Q-learning! Hence, we can say that the Q-learning is a special case of Expected SARSA where the policy is greedy!
+
+## Conclusion
+
+Thats all! I tried to cover the intuition behind SARSA, Q-learning and Expected SARSA. I hope you will find it useful.
+
+
+### References
+
+- All the images in this blog are generated using Gemini.
+- The contents of this blog are based on the lectures in Coursera Reinforcement Learning Specialization by University of Alberta. The lectures are available at [Coursera](https://www.coursera.org/specializations/reinforcement-learning).
