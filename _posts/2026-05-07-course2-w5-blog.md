@@ -24,9 +24,14 @@ Let's define a model first.
 
 ![Model](/images/RL_2_W5_blog/image_1_model.png)
 
+Model is just a way of representing the environment. That is , for each state, and action to the environment, we should get the same reward and reward. Let's think about a video game of football match. Here are the players, the goal posts, the referees. The state and action - in this case- the ball  and player position, and the kick/ pass/ block , the reward will be similar , i.e. scording goals, blocking goals etc! But this is obvious from the example, you will not get the exact reward of scording goals!  in the same way, the model is representation of the environment. Not a "Replacement" of the environment. The purpose of this model is to get the simulated experience ( similar to the football game)  which will help your policy in the end!
+
+![Model_objective](/images/RL_2_W5_blog/image_2_model_objective.png)
+
+
 
 TODO
 
 2026/05/10
-- [] complete writeup on this video https://www.coursera.org/learn/sample-based-learning-methods/home/module/4
+
 
