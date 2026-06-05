@@ -30,8 +30,10 @@ Model is just a way of representing the environment. That is , for each state, a
 
 
 
-TODO
+# TODO
 
-2026/05/10
+## 2026/06/05
+
+- [ ] Complete the video after model objective
 
 
