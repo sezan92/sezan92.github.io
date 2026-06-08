@@ -49,6 +49,6 @@ Here comes the distribution model! If we know the probability distributions (or 
 
 ## 2026/06/05
 
-- [ ] Complete the video after model objective
+- [ ] Complete the video after model  [from 3:26 onwards]
 
 
