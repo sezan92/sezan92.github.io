@@ -28,7 +28,22 @@ Model is just a way of representing the environment. That is , for each state, a
 
 ![Model_objective](/images/RL_2_W5_blog/image_2_model_objective.png)
 
+## Types of Models
 
+There are two types of models
+
+- Sample models.
+- Distribution models.
+
+### Sample Models
+
+What is a sample model? Let's put it this way, Suppose you have flipped multiple coins OR flipped same coin several times. Now you write down the heads and tails of those flipps. This is exactly SAMPLE MODEL! ***How about we write down the probabilities of each coins heads or tails?***
+
+### Distribution model
+
+Here comes the distribution model! If we know the probability distributions (or better, the functions) of the coin flips either one after the other or parallel flips we can get the distributions of each head or tail right?! This is Distribution model! 
+
+![Types_of_models](/images/RL_2_W5_blog/image_3_model_types.png)
 
 # TODO
 
