@@ -45,10 +45,17 @@ Here comes the distribution model! If we know the probability distributions (or 
 
 ![Types_of_models](/images/RL_2_W5_blog/image_3_model_types.png)
 
+
+#### The question? Which one is better representation?
+
+As we go forward ,we can realize the environemts to deal with, will be way complex to let distribution models deal with them! Think about [Atari Games](https://en.wikipedia.org/wiki/Atari_Games). How many states action and rewards are there! But if we want to use RL in real world - we need the sample based models!!
+
+
+
 # TODO
 
-## 2026/06/05
+## 2026/06/19
 
-- [ ] Complete the video after model  [from 3:26 onwards]
+- [ ] Start the [video](https://www.coursera.org/learn/sample-based-learning-methods/lecture/VfQFk/comparing-sample-and-distribution-models)
 
 
