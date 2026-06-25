@@ -50,12 +50,13 @@ Here comes the distribution model! If we know the probability distributions (or 
 
 As we go forward ,we can realize the environemts to deal with, will be way complex to let distribution models deal with them! Think about [Atari Games](https://en.wikipedia.org/wiki/Atari_Games). How many states action and rewards are there! But if we want to use RL in real world - we need the sample based models!!
 
+### Sample Model vs Distribution Model
 
 
 # TODO
 
-## 2026/06/19
+## 2026/06/25
 
-- [ ] Start the [video](https://www.coursera.org/learn/sample-based-learning-methods/lecture/VfQFk/comparing-sample-and-distribution-models)
+- [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/VfQFk/comparing-sample-and-distribution-models)
 
 
