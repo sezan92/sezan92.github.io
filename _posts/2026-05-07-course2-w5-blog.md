@@ -46,17 +46,19 @@ Here comes the distribution model! If we know the probability distributions (or 
 ![Types_of_models](/images/RL_2_W5_blog/image_3_model_types.png)
 
 
-#### The question? Which one is better representation?
+### Sample Model vs Distribution Model
 
 As we go forward ,we can realize the environemts to deal with, will be way complex to let distribution models deal with them! Think about [Atari Games](https://en.wikipedia.org/wiki/Atari_Games). How many states action and rewards are there! But if we want to use RL in real world - we need the sample based models!!
 
-### Sample Model vs Distribution Model
+Think about this! Notice how many pausible outcomes for 12 dices ? But if we take the sample model approach, we can get the distribution (in other words, the outcomes of rolling 12 dices maybe 10000 times ), we still get some kind of working data with less computation and hassle.
+
+![sample_vs_dist_dice_12_role](/images/RL_2_W5_blog/image_4_12_dice_distribution.png)
+
+The distribution model, which is getting the exact probability is useful when number of parameters are low (compared to the power of computation obviously!)
 
 
-# TODO
+## 2026/07/02
 
-## 2026/06/25
-
-- [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/VfQFk/comparing-sample-and-distribution-models)
+- [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/mdEPi/random-tabular-q-planning)
 
 
