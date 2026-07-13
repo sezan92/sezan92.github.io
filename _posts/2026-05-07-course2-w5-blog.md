@@ -57,7 +57,7 @@ Think about this! Notice how many pausible outcomes for 12 dices ? But if we tak
 The distribution model, which is getting the exact probability is useful when number of parameters are low (compared to the power of computation obviously!)
 
 
-## 2026/07/02
+## 2026/07/13
 
 - [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/mdEPi/random-tabular-q-planning)
 
