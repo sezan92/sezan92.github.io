@@ -56,9 +56,24 @@ Think about this! Notice how many pausible outcomes for 12 dices ? But if we tak
 
 The distribution model, which is getting the exact probability is useful when number of parameters are low (compared to the power of computation obviously!)
 
+## PLanning using Q learning + Model
+
+So, now we have idea about models, we have a very practical and interesting usecase. Suppose you have an accurate model for an environment. So, instead of letting agent interacting with the environment directly, how about we let the agent interact with the model ?!!
+
+```mermaid
+graph LR
+    Agent -->|Action| Model
+    Model -->|Reward| Agent
+```
+
+This will be very helpful given interacting with the environment is way more tricky. For intuition, it is very similar to playing baseball or golf in a simulated machine before actually playing the baseball or golf!!
+
+
+
 
 ## 2026/07/13
 
 - [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/mdEPi/random-tabular-q-planning)
+
 
 
