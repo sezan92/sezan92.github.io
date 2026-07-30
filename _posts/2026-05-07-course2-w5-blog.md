@@ -66,14 +66,20 @@ graph LR
     Model -->|Reward| Agent
 ```
 
-This will be very helpful given interacting with the environment is way more tricky. For intuition, it is very similar to playing baseball or golf in a simulated machine before actually playing the baseball or golf!!
+To be precise,
+
+somehing like following happens
+
+![tabular_planning](/images/RL_2_W5_blog/image_5_random_sample_one_step_tabular_Q_planning.png)
+
+### Advantages of planning using model
+
+The biggest advantage is that when you have a model, your reliance on training the agent based on interaction with the real world environment reduces drastically! Even if you train your model with the real environment, you can still train the agent using the model of the environment while you wait for the results from the actions to the real environment!
 
 
+## 2026/07/30
 
-
-## 2026/07/13
-
-- [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/mdEPi/random-tabular-q-planning)
+- [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/O5x6s/the-dyna-architecture)
 
 
 
