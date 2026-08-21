@@ -76,6 +76,15 @@ somehing like following happens
 
 The biggest advantage is that when you have a model, your reliance on training the agent based on interaction with the real world environment reduces drastically! Even if you train your model with the real environment, you can still train the agent using the model of the environment while you wait for the results from the actions to the real environment!
 
+## Dyna Architecture
+
+### Intuition
+So, suppose , you are trying to learn how to score a goal in football (again!). You got the ball. You see the opposite team players. Try to dribble them. You may fail. You may not fail and pass them through! Everytime you fail to pass through them, you restart from the first position!  You do not get reward at each step you take! You will only get reward when you score the goal. Here is a problem with this approach.
+It will take lots of games to make you learn (even if you can learn!)
+
+*How about you do this!* At every step, you stop for a second, you strategize based on your past experiences and do whatever you think is the best? For first step, you may not have good information, but for 100th step, you might have more don't you? This thinking about the environment is modeling. The updating your strategy based on the goal you score or the lack thereof is the direct Reinforcement learning. We are basically combining the RL with planning !!! This is called Dyna Architecture.
+
+![Dyna_arch](/images/RL_2_W5_blog/image_6_dyna_architecture.png)
 
 ## 2026/07/30
 
