@@ -86,6 +86,9 @@ It will take lots of games to make you learn (even if you can learn!)
 
 ![Dyna_arch](/images/RL_2_W5_blog/image_6_dyna_architecture.png)
 
+### Dyna Algorithm for tabular environment
+TODO: add this
+
 ## 2026/09/28
 
 - [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/k7Out/the-dyna-algorithm)
