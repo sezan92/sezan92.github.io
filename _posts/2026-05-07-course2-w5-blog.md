@@ -87,17 +87,9 @@ It will take lots of games to make you learn (even if you can learn!)
 ![Dyna_arch](/images/RL_2_W5_blog/image_6_dyna_architecture.png)
 
 ### Dyna Algorithm for tabular environment
-So the Dyna Architecture . 
+So the Dyna algorithm for tabular environment
 
-DRAFT VERSION:
-First let initialize the state.
-Let the agent take action based on the state
-then let the agent based on previous samples , run the previous samples many times and update the Q table
-(Question: should not we first run many random actions to get the samples?)
-then take the new action based on the current state
-this is in short dyna Q. only difference between Q learning and dyna Q is that dyna Q runs Q value update equation based on available data from memory many many times before taking the next step.
-
-this is easy pie peasy for Tabular environment. For continuous, i do not know.
+![dyna_algo](/images/RL_2_W5_blog/image_7_dyna_algorithm_for_tabular_environment.png)
 
 ##  TODO 2026/10/21
 
