@@ -88,12 +88,12 @@ It will take lots of games to make you learn (even if you can learn!)
 
 ### Dyna Algorithm for tabular environment
 So the Dyna algorithm for tabular environment
-
+according to the course lecture is as following 
 ![dyna_algo](/images/RL_2_W5_blog/image_7_dyna_algorithm_for_tabular_environment.png)
 
-##  TODO 2026/10/21
+##  TODO 2026/11/25
 
-- [ ] Write about the video (https://www.coursera.org/learn/sample-based-learning-methods/lecture/k7Out/the-dyna-algorithm) complete the dyna algorithm for tabular environment
+- [ ] add screenshot to shpow the result from course on normal Q learning vs Dyna Q
 
 
 
